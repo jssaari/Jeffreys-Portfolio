@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+$colors: (
+  primary: #3c88d4,
+  primary-hover: #387fc5,
+  secondary: #142a40,
+  secondary-hover: #0d1b29,
+  tertiary: #cbdbfc,
+  off-white: #f2f2f2,
+);
+
+$padding: 15px;
+$borders: 15px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  background-color: color(off-white);
+}
+header {
+  padding: $padding;
+}
+a {
+  text-decoration: none;
+  color: color(primary-light);
+  &:hover {
+    color: color(primary-dark);
+    transition: 0.3s;
+  }
+  &.back {
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+}
+img {
+  width: 100%;
+}
