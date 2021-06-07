@@ -8,8 +8,10 @@ $colors: (
   off-white: #f2f2f2,
 );
 
-$padding: 15px;
-$borders: 15px;
+$padding: 1em;
+$wbutpad: 0.2em;
+$hbutpad: 1em;
+$radius: 1.1em;
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
@@ -33,20 +35,70 @@ body {
   margin: 0;
   background-color: color(off-white);
 }
+
 header {
-  padding: $padding;
+  background-color: #fff;
+  padding: 1em 0;
+  @include desktop {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .logo {
+    font-weight: 700;
+  }
+  .nav {
+    ul {
+      @include desktop {
+        display: flex;
+        padding: 0;
+      }
+      li {
+        @include desktop {
+          padding: 0 $padding;
+          width: 5em;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+          font-weight: 500;
+          &:hover {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .nav-button {
+    font-weight: 700;
+    @include desktop {
+    }
+  }
 }
+
+.empty {
+  color: color(primary);
+  border-style: solid;
+  border-radius: $radius;
+  padding: $wbutpad $hbutpad;
+  &:hover {
+    color: #fff;
+    background-color: color(primary);
+    border-color: color(primary);
+  }
+}
+
 a {
   text-decoration: none;
-  color: color(primary-light);
+  color: inherit;
   &:hover {
-    color: color(primary-dark);
-    transition: 0.3s;
+    transition: 0.2s;
   }
-  &.back {
-    font-weight: 700;
-    font-size: 1.5em;
-  }
+}
+li {
+  list-style: none;
 }
 img {
   width: 100%;
