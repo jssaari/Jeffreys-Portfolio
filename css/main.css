@@ -110,6 +110,15 @@ section.hero .hero-button {
   padding: 0.4em 1.2em;
 }
 
+.ellipse {
+  height: 95px;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 50% 50% 50% 50%;
+  margin: 0 auto -3em;
+  position: relative;
+}
+
 section.about {
   background-color: #3c88d4;
 }
@@ -318,7 +327,6 @@ section.my-work h3 {
   section.my-work .inner .right ul {
     margin: 0 0 6em;
     font-weight: 500;
-    font-size: 1.2em;
     line-height: 2em;
   }
 }
@@ -490,6 +498,7 @@ section.contact .inner .contact-button {
   border-radius: 1.1em;
   padding: 0.2em 1em;
   font-weight: 600;
+  font-size: 1.2em;
 }
 
 .empty:hover {
