@@ -189,6 +189,96 @@ section.about {
   }
 }
 
+section.my-work {
+  @include desktop {
+    text-align: center;
+    margin: 15em 0 0;
+  }
+  h1 {
+    color: color(primary);
+    margin: 0;
+    @include desktop {
+      font-size: 4em;
+    }
+  }
+  h3 {
+    color: color(secondary);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin: 0;
+    @include desktop {
+      font-size: 1.7em;
+      margin: -0.5em 0 1.5em;
+    }
+  }
+  .inner {
+    @include desktop {
+      display: flex;
+      align-items: flex-end;
+      .left {
+        width: 57%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+        .buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          .button {
+            margin: 0 0.5em;
+          }
+        }
+      }
+      .right {
+        display: flex;
+        width: 35%;
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+        ul {
+          margin: 0 0 6em;
+          font-weight: 500;
+          font-size: 1.2em;
+          line-height: 2em;
+        }
+      }
+    }
+  }
+}
+
+section.project-tools {
+  background-color: color(secondary);
+  @include desktop {
+    position: relative;
+    border-radius: 0.7em;
+    width: 48em;
+    margin: 9em auto -2.5em;
+    padding: 0.5em 0.2em;
+  }
+  ul {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      li {
+        margin: 0.5em;
+        img {
+          width: 5.5em;
+        }
+      }
+    }
+  }
+}
+
+section.YouTube {
+  background-color: color(primary);
+}
+
 .filled {
   background-color: color(primary);
   color: #fff;
@@ -222,6 +312,10 @@ a {
   &:hover {
     transition: 0.2s;
   }
+}
+ul {
+  padding: 0;
+  margin: 0;
 }
 li {
   list-style: none;

@@ -225,6 +225,142 @@ section.about section.cards .card p {
   }
 }
 
+@media (min-width: 840px) {
+  section.my-work {
+    text-align: center;
+    margin: 15em 0 0;
+  }
+}
+
+section.my-work h1 {
+  color: #3c88d4;
+  margin: 0;
+}
+
+@media (min-width: 840px) {
+  section.my-work h1 {
+    font-size: 4em;
+  }
+}
+
+section.my-work h3 {
+  color: #142a40;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+@media (min-width: 840px) {
+  section.my-work h3 {
+    font-size: 1.7em;
+    margin: -0.5em 0 1.5em;
+  }
+}
+
+@media (min-width: 840px) {
+  section.my-work .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  section.my-work .inner .left {
+    width: 57%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.my-work .inner .left img {
+    width: 100%;
+  }
+  section.my-work .inner .left .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.my-work .inner .left .buttons .button {
+    margin: 0 0.5em;
+  }
+  section.my-work .inner .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 35%;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.my-work .inner .right ul {
+    margin: 0 0 6em;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+}
+
+section.project-tools {
+  background-color: #142a40;
+}
+
+@media (min-width: 840px) {
+  section.project-tools {
+    position: relative;
+    border-radius: 0.7em;
+    width: 48em;
+    margin: 9em auto -2.5em;
+    padding: 0.5em 0.2em;
+  }
+}
+
+@media (min-width: 840px) {
+  section.project-tools ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  section.project-tools ul li {
+    margin: 0.5em;
+  }
+  section.project-tools ul li img {
+    width: 5.5em;
+  }
+}
+
+section.YouTube {
+  background-color: #3c88d4;
+}
+
 .filled {
   background-color: #3c88d4;
   color: #fff;
@@ -264,6 +400,11 @@ a {
 a:hover {
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 li {
