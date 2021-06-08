@@ -78,11 +78,134 @@ header {
   }
 }
 
+section.hero {
+  @include desktop {
+    display: flex;
+    width: 41.5em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 12em auto;
+  }
+  h1 {
+    color: color(primary);
+    @include desktop {
+      font-size: 3em;
+      margin: 0;
+      text-transform: uppercase;
+      line-height: 1.1em;
+      letter-spacing: 0.1em;
+    }
+  }
+  p {
+    color: color(primary);
+    font-size: 1.2em;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    margin: 0.3em 0;
+  }
+  .hero-button {
+    margin: 0.7em 0 0;
+    padding: 0.4em 1.2em;
+  }
+}
+
+section.about {
+  background-color: color(primary);
+  .inner {
+    @include desktop {
+      display: flex;
+      width: 60.5em;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      padding: 5.5em 0;
+    }
+    h2 {
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      @include desktop {
+        line-height: 1.5em;
+        letter-spacing: 0.03em;
+        font-size: 1.1em;
+      }
+    }
+    .about-button {
+      background-color: color(secondary);
+      margin: 1.5em 0 0;
+      padding: 0.3em 1em;
+      &:hover {
+        background-color: color(secondary-hover);
+      }
+    }
+  }
+  section.cards {
+    @include desktop {
+      display: flex;
+      width: 78.5em;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      padding: 0;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+    .card {
+      border-radius: 0.7em;
+      background-color: color(secondary);
+      padding: 1em;
+      @include desktop {
+        width: 22em;
+        height: 27.5em;
+        margin: 0 0.8em -12em;
+      }
+      img {
+        color: color(primary);
+        margin: 0.5em 0 0em;
+        width: 3em;
+      }
+
+      h3 {
+        color: #fff;
+        margin: 0em 0 0;
+      }
+      h4 {
+        color: color(primary);
+        margin: 1em 0 0.2em;
+        font-weight: 600;
+      }
+      p {
+        color: #fff;
+        @include desktop {
+          margin: 0;
+          line-height: 1.6em;
+        }
+      }
+    }
+  }
+}
+
+.filled {
+  background-color: color(primary);
+  color: #fff;
+  border-radius: $radius;
+  padding: $wbutpad $hbutpad;
+  font-weight: 600;
+  font-size: 1.2em;
+  &:hover {
+    background-color: color(primary-hover);
+  }
+}
 .empty {
   color: color(primary);
   border-style: solid;
   border-radius: $radius;
   padding: $wbutpad $hbutpad;
+  font-weight: 600;
   &:hover {
     color: #fff;
     background-color: color(primary);
@@ -90,6 +213,9 @@ header {
   }
 }
 
+p {
+  margin: 0;
+}
 a {
   text-decoration: none;
   color: inherit;
