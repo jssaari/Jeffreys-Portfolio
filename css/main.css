@@ -281,7 +281,7 @@ section.my-work h3 {
             align-items: center;
   }
   section.my-work .inner .left img {
-    width: 100%;
+    width: 1084px;
   }
   section.my-work .inner .left .buttons {
     display: -webkit-box;
@@ -361,6 +361,116 @@ section.YouTube {
   background-color: #3c88d4;
 }
 
+@media (min-width: 840px) {
+  section.YouTube {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+section.YouTube .left {
+  margin: 0 0 -5em;
+}
+
+section.YouTube .right {
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  section.YouTube .right {
+    margin: 8em -6em 8em 11em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+section.YouTube .right p {
+  color: #142a40;
+  font-weight: 500;
+  font-size: 1.2em;
+  letter-spacing: 0.2em;
+}
+
+section.YouTube .right h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 2.5em;
+  width: 10em;
+}
+
+section.YouTube .right .button {
+  margin: 1em 0 0;
+  font-size: 1.3em;
+  padding: 0.2em 1em;
+}
+
+section.contact {
+  background-color: #142a40;
+}
+
+@media (min-width: 840px) {
+  section.contact .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 8em 0 3em;
+  }
+}
+
+section.contact .inner h3 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+section.contact .inner p.subtext {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+section.contact .inner .form {
+  color: #3c88d4;
+}
+
+section.contact .inner .form input {
+  background-color: #142a40;
+  border: 0.5px solid #3c88d4;
+}
+
+section.contact .inner .form input:focus-visible {
+  border: 3px solid #3c88d4;
+}
+
+section.contact .inner .contact-button {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 700;
+  padding: 0.2em 1em;
+  margin: 1em 0 0;
+}
+
 .filled {
   background-color: #3c88d4;
   color: #fff;
@@ -386,6 +496,14 @@ section.YouTube {
   color: #fff;
   background-color: #3c88d4;
   border-color: #3c88d4;
+}
+
+.dark {
+  background-color: #142a40;
+}
+
+.dark:hover {
+  background-color: #0d1b29;
 }
 
 p {

@@ -222,7 +222,7 @@ section.my-work {
         flex-direction: column;
         align-items: center;
         img {
-          width: 100%;
+          width: 1084px;
         }
         .buttons {
           display: flex;
@@ -277,6 +277,81 @@ section.project-tools {
 
 section.YouTube {
   background-color: color(primary);
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .left {
+    margin: 0 0 -5em;
+    .video {
+    }
+  }
+  .right {
+    text-align: center;
+    @include desktop {
+      margin: 8em -6em 8em 11em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    p {
+      color: color(secondary);
+      font-weight: 500;
+      font-size: 1.2em;
+      letter-spacing: 0.2em;
+    }
+    h2 {
+      color: #fff;
+      margin: 0;
+      font-size: 2.5em;
+      width: 10em;
+    }
+    .button {
+      margin: 1em 0 0;
+      font-size: 1.3em;
+      padding: $wbutpad $hbutpad;
+    }
+  }
+}
+
+section.contact {
+  background-color: color(secondary);
+  .inner {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8em 0 3em;
+    }
+    h3 {
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      font-size: 2em;
+    }
+    p.subtext {
+      color: #fff;
+      font-size: 1.2em;
+    }
+    .form {
+      color: color(primary);
+      input {
+        background-color: color(secondary);
+        border: 0.5px solid color(primary);
+        &:focus-visible {
+          border: 3px solid color(primary);
+        }
+      }
+    }
+    .contact-button {
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: 700;
+      padding: $wbutpad $hbutpad;
+      margin: 1em 0 0;
+    }
+  }
 }
 
 .filled {
@@ -300,6 +375,13 @@ section.YouTube {
     color: #fff;
     background-color: color(primary);
     border-color: color(primary);
+  }
+}
+
+.dark {
+  background-color: color(secondary);
+  &:hover {
+    background-color: color(secondary-hover);
   }
 }
 
