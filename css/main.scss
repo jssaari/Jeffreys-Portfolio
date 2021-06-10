@@ -2,6 +2,7 @@
 $colors: (
   primary: #3c88d4,
   primary-hover: #387fc5,
+  primary-accent: #3675b4,
   secondary: #142a40,
   secondary-hover: #0d1b29,
   tertiary: #cbdbfc,
@@ -249,7 +250,7 @@ section.my-work {
         align-items: center;
         flex-direction: column;
         ul {
-          margin: 0 0 6em;
+          margin: 0 0 10em;
           font-weight: 500;
           line-height: 2em;
         }
@@ -341,9 +342,13 @@ section.contact {
     }
     .form {
       color: color(primary);
+      width: 25em;
       input {
         background-color: color(secondary);
         border: 0.5px solid color(primary);
+        &:hover {
+          border: 3px solid color(primary);
+        }
         &:focus-visible {
           border: 3px solid color(primary);
         }
@@ -355,6 +360,30 @@ section.contact {
       font-weight: 700;
       padding: $wbutpad $hbutpad;
       margin: 1em 0 0;
+    }
+  }
+}
+footer {
+  background-color: color(primary);
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .inner {
+    margin: 6em auto 1em;
+  }
+  p {
+    color: #fff;
+    @include desktop {
+      font-size: 1.3em;
+    }
+  }
+  .credits {
+    color: color(tertiary);
+    @include desktop {
+      font-size: 1em;
     }
   }
 }
@@ -390,7 +419,10 @@ section.contact {
     background-color: color(secondary-hover);
   }
 }
-
+footer {
+  margin: 0;
+  padding: 0;
+}
 p {
   margin: 0;
 }
