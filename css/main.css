@@ -518,6 +518,11 @@ footer p {
   }
 }
 
+footer .social img {
+  width: 1em;
+  color: #fff;
+}
+
 footer .credits {
   color: #cbdbfc;
 }

@@ -380,6 +380,12 @@ footer {
       font-size: 1.3em;
     }
   }
+  .social {
+    img {
+      width: 1em;
+      color: #fff;
+    }
+  }
   .credits {
     color: color(tertiary);
     @include desktop {
