@@ -484,6 +484,25 @@ section.contact .inner .contact-button {
   margin: 1em 0 0;
 }
 
+section.contact .suggestions {
+  background-color: #3675b4;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+section.contact .suggestions .left {
+  font-size: 1.5em;
+}
+
 footer {
   background-color: #3c88d4;
 }
@@ -518,7 +537,19 @@ footer p {
   }
 }
 
-footer .social img {
+footer .social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .social ul img {
   width: 1em;
   color: #fff;
 }
