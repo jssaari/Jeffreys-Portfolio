@@ -35,12 +35,16 @@ body {
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
   background-color: color(off-white);
+  scroll-behavior: smooth;
+  transition:ease-in-out 0.2s;
 }
 
 header {
   background-color: #fff;
   padding: 1em 0;
   @include desktop {
+    scroll-behavior: smooth;
+    transition:ease-in-out 0.2s;
     display: flex;
     width: 100%;
     margin: auto;
@@ -321,7 +325,7 @@ section.YouTube {
   }
 }
 
-section.contact {
+section#contact {
   background-color: color(secondary);
   .inner {
     @include desktop {

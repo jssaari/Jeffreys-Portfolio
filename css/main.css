@@ -8,6 +8,9 @@ body {
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
   background-color: #f2f2f2;
+  scroll-behavior: smooth;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 
 header {
@@ -17,6 +20,9 @@ header {
 
 @media (min-width: 840px) {
   header {
+    scroll-behavior: smooth;
+    -webkit-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -426,12 +432,12 @@ section.YouTube .right .button {
   padding: 0.2em 1em;
 }
 
-section.contact {
+section#contact {
   background-color: #142a40;
 }
 
 @media (min-width: 840px) {
-  section.contact .inner {
+  section#contact .inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -446,37 +452,37 @@ section.contact {
   }
 }
 
-section.contact .inner h3 {
+section#contact .inner h3 {
   color: #fff;
   margin: 0;
   padding: 0;
   font-size: 2em;
 }
 
-section.contact .inner p.subtext {
+section#contact .inner p.subtext {
   color: #fff;
   font-size: 1.2em;
 }
 
-section.contact .inner .form {
+section#contact .inner .form {
   color: #3c88d4;
   width: 25em;
 }
 
-section.contact .inner .form input {
+section#contact .inner .form input {
   background-color: #142a40;
   border: 0.5px solid #3c88d4;
 }
 
-section.contact .inner .form input:hover {
+section#contact .inner .form input:hover {
   border: 3px solid #3c88d4;
 }
 
-section.contact .inner .form input:focus-visible {
+section#contact .inner .form input:focus-visible {
   border: 3px solid #3c88d4;
 }
 
-section.contact .inner .contact-button {
+section#contact .inner .contact-button {
   text-align: center;
   font-size: 1.4em;
   font-weight: 700;
@@ -484,12 +490,12 @@ section.contact .inner .contact-button {
   margin: 1em 0 0;
 }
 
-section.contact .suggestions {
+section#contact .suggestions {
   background-color: #3675b4;
 }
 
 @media (min-width: 840px) {
-  section.contact .suggestions {
+  section#contact .suggestions {
     position: relative;
     border-radius: 0.7em;
     width: 48em;
@@ -498,7 +504,7 @@ section.contact .suggestions {
   }
 }
 
-section.contact .suggestions .inner2 {
+section#contact .suggestions .inner2 {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,7 +523,7 @@ section.contact .suggestions .inner2 {
   padding: 1.5em 0;
 }
 
-section.contact .suggestions .inner2 .left {
+section#contact .suggestions .inner2 .left {
   font-size: 1.5em;
 }
 
