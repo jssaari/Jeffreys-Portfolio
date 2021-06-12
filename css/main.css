@@ -486,10 +486,27 @@ section.contact .inner .contact-button {
 
 section.contact .suggestions {
   background-color: #3675b4;
+}
+
+@media (min-width: 840px) {
+  section.contact .suggestions {
+    position: relative;
+    border-radius: 0.7em;
+    width: 48em;
+    margin: 1em auto -3.5em;
+    padding: 0.5em 0.2em;
+  }
+}
+
+section.contact .suggestions .inner2 {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -497,9 +514,10 @@ section.contact .suggestions {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  padding: 1.5em 0;
 }
 
-section.contact .suggestions .left {
+section.contact .suggestions .inner2 .left {
   font-size: 1.5em;
 }
 
@@ -538,6 +556,7 @@ footer p {
 }
 
 footer .social ul {
+  padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
