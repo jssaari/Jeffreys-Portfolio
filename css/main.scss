@@ -400,6 +400,9 @@ footer {
     color: #fff;
     @include desktop {
       font-size: 1.3em;
+      &.tagline {
+        width:25em;
+      }
     }
   }
   .social {
@@ -408,6 +411,12 @@ footer {
       display:flex;
       align-items: center;
       justify-content: space-evenly;
+      li {
+        border: 2px color(tertiary) solid;
+        width: 1.7em;
+        height: 1.7em;
+        border-radius: 2em;
+      }
       img {
         width: 1em;
         color: #fff;

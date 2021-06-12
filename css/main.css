@@ -553,6 +553,9 @@ footer p {
   footer p {
     font-size: 1.3em;
   }
+  footer p.tagline {
+    width: 25em;
+  }
 }
 
 footer .social ul {
@@ -566,6 +569,13 @@ footer .social ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+footer .social ul li {
+  border: 2px #cbdbfc solid;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 2em;
 }
 
 footer .social ul img {
