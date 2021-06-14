@@ -466,12 +466,46 @@ section#contact .inner p.subtext {
 
 section#contact .inner .form {
   color: #3c88d4;
-  width: 25em;
+  width: 40em;
+  padding: 1.5em 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#contact .inner .form .name {
+  width: 47%;
+  min-height: 4em;
+  padding: 0 0 1em;
+}
+
+section#contact .inner .form .email {
+  width: 47%;
+  min-height: 4em;
+  padding: 0 0 1em;
+}
+
+section#contact .inner .form .message {
+  width: 100%;
+  min-height: 12em;
 }
 
 section#contact .inner .form input {
   background-color: #142a40;
   border: 0.5px solid #3c88d4;
+  width: 100%;
+  border-radius: 0.2em;
+  color: #fff;
+  padding: 0.3em 0.3em 0.3em 0.5em;
+}
+
+section#contact .inner .form input.input-message {
+  padding: 0.3em 0.3em 10em 0.5em;
 }
 
 section#contact .inner .form input:hover {
@@ -520,7 +554,7 @@ section#contact .suggestions .inner2 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 1.5em 0;
+  padding: 0.7em 0;
 }
 
 section#contact .suggestions .inner2 .left {
@@ -665,5 +699,9 @@ li {
 
 img {
   width: 100%;
+}
+
+input:focus-visible {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */

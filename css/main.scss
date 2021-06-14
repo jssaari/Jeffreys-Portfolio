@@ -36,7 +36,7 @@ body {
   margin: 0;
   background-color: color(off-white);
   scroll-behavior: smooth;
-  transition:ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 
 header {
@@ -44,7 +44,7 @@ header {
   padding: 1em 0;
   @include desktop {
     scroll-behavior: smooth;
-    transition:ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
     display: flex;
     width: 100%;
     margin: auto;
@@ -346,10 +346,35 @@ section#contact {
     }
     .form {
       color: color(primary);
-      width: 25em;
+      width: 40em;
+      padding: 1.5em 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .name {
+        width: 47%;
+        min-height: 4em;
+        padding: 0 0 1em;
+      }
+      .email {
+        width: 47%;
+        min-height: 4em;
+        padding: 0 0 1em;
+      }
+      .message {
+        width: 100%;
+        min-height: 12em;
+      }
       input {
         background-color: color(secondary);
         border: 0.5px solid color(primary);
+        width: 100%;
+        border-radius: 0.2em;
+        color: #fff;
+        padding: 0.3em 0.3em 0.3em 0.5em;
+        &.input-message {
+          padding: 0.3em 0.3em 10em 0.5em;
+        }
         &:hover {
           border: 3px solid color(primary);
         }
@@ -376,13 +401,13 @@ section#contact {
       padding: 0.5em 0.2em;
     }
     .inner2 {
-      color:#fff;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding: 1.5em 0;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      padding: 0.7em 0;
       .left {
         font-size: 1.5em;
       }
@@ -405,14 +430,14 @@ footer {
     @include desktop {
       font-size: 1.3em;
       &.tagline {
-        width:25em;
+        width: 25em;
       }
     }
   }
   .social {
     ul {
       padding: 2em;
-      display:flex;
+      display: flex;
       align-items: center;
       justify-content: space-evenly;
       li {
@@ -489,4 +514,10 @@ li {
 }
 img {
   width: 100%;
+}
+
+input {
+  &:focus-visible {
+    text-decoration: none;
+  }
 }
