@@ -365,9 +365,12 @@ section.project-tools {
   }
   section.project-tools ul li {
     margin: 0.5em;
+    width: 6em;
+    height: 5.5em;
   }
-  section.project-tools ul li img {
-    width: 5.5em;
+  section.project-tools ul li i {
+    color: #3c88d4;
+    font-size: 5.5em;
   }
 }
 
@@ -533,7 +536,7 @@ section#contact .suggestions {
   section#contact .suggestions {
     position: relative;
     border-radius: 0.7em;
-    width: 48em;
+    width: 52em;
     margin: 1em auto -3.5em;
     padding: 0.5em 0.2em;
   }
@@ -555,7 +558,7 @@ section#contact .suggestions .inner2 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 0.7em 0;
+  padding: 2em 2em;
 }
 
 section#contact .suggestions .inner2 .left {
@@ -619,7 +622,7 @@ footer .social ul li {
   border-radius: 2em;
 }
 
-footer .social ul img {
+footer .social ul i {
   width: 1em;
   color: #fff;
 }
@@ -698,7 +701,8 @@ li {
   list-style: none;
 }
 
-img {
+img,
+i {
   width: 100%;
 }
 
