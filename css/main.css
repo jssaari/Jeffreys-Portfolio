@@ -212,10 +212,10 @@ section.about section.cards .card {
   }
 }
 
-section.about section.cards .card img {
+section.about section.cards .card i {
   color: #3c88d4;
-  margin: 0.5em 0 0em;
-  width: 3em;
+  margin: 0.5em 0em;
+  font-size: 2.5em;
 }
 
 section.about section.cards .card h3 {
@@ -385,23 +385,35 @@ section.YouTube {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
-section.YouTube .left {
-  margin: 0 0 -5em;
+section.YouTube .right-iframe-container {
+  margin: 5rem 0 -5rem 5rem;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 32%;
 }
 
-section.YouTube .right {
+section.YouTube .right-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.YouTube .left {
   text-align: center;
 }
 
 @media (min-width: 840px) {
-  section.YouTube .right {
-    margin: 8em -6em 8em 11em;
+  section.YouTube .left {
+    margin: 7em 2em 5em 7em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -415,21 +427,21 @@ section.YouTube .right {
   }
 }
 
-section.YouTube .right p {
+section.YouTube .left p {
   color: #142a40;
   font-weight: 500;
   font-size: 1.2em;
   letter-spacing: 0.2em;
 }
 
-section.YouTube .right h2 {
+section.YouTube .left h2 {
   color: #fff;
   margin: 0;
   font-size: 2.5em;
   width: 10em;
 }
 
-section.YouTube .right .button {
+section.YouTube .left .button {
   margin: 1em 0 0;
   font-size: 1.3em;
   padding: 0.2em 1em;

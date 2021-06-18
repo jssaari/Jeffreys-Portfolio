@@ -176,10 +176,10 @@ section.about {
         height: 27.5em;
         margin: 0 0.8em -12em;
       }
-      img {
+      i {
         color: color(primary);
-        margin: 0.5em 0 0em;
-        width: 3em;
+        margin: 0.5em 0em;
+        font-size:2.5em;
       }
 
       h3 {
@@ -295,15 +295,26 @@ section.YouTube {
   @include desktop {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
   }
+  .right-iframe-container {
+      margin: 5rem 0 -5rem 5rem;
+      position:relative;
+      width:100%;
+      height:0;
+      padding-bottom: 32%;
+      iframe {
+        position:absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+      }
+    }
   .left {
-    margin: 0 0 -5em;
-  }
-  .right {
     text-align: center;
     @include desktop {
-      margin: 8em -6em 8em 11em;
+      margin: 7em 2em 5em 7em;
       display: flex;
       flex-direction: column;
       align-items: center;
