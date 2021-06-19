@@ -19,7 +19,13 @@ $radius: 1.1em;
 }
 
 $desktop: 840px;
+$youtube: 1240px;
 
+@mixin youtube {
+  @media (max-width: #{$youtube}) {
+    @content;
+  }
+}
 @mixin desktop {
   @media (min-width: #{$desktop}) {
     @content;
@@ -42,14 +48,14 @@ body {
 header {
   background-color: #fff;
   padding: 1em 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   @include desktop {
     scroll-behavior: smooth;
     transition: ease-in-out 0.2s;
-    display: flex;
     width: 100%;
     margin: auto;
-    justify-content: space-evenly;
-    align-items: center;
   }
   .logo {
     font-weight: 700;
@@ -84,55 +90,70 @@ header {
 }
 
 section.hero {
+  display: flex;
+  width: 22em;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 4em auto;
   @include desktop {
-    display: flex;
     width: 41.5em;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     margin: 12em auto;
   }
   h1 {
     color: color(primary);
+    font-size: 1.8em;
+    line-height: 1.3em;
+    margin: 0;
+    text-transform: uppercase;
     @include desktop {
       font-size: 3em;
-      margin: 0;
-      text-transform: uppercase;
       line-height: 1.1em;
       letter-spacing: 0.1em;
     }
   }
   p {
     color: color(primary);
-    font-size: 1.2em;
-    line-height: 1.5em;
+    font-size: 0.8em;
     letter-spacing: 0.05em;
+    line-height: 1.5em;
     margin: 0.3em 0;
+    @include desktop {
+      font-size: 1.2em;
+    }
   }
   .hero-button {
-    margin: 0.7em 0 0;
-    padding: 0.4em 1.2em;
+    @include desktop {
+      margin: 0.7em 0 0;
+      padding: 0.4em 1.2em;
+    }
   }
 }
 .ellipse {
-  height: 95px;
-  width: 100%;
-  background-color: #f2f2f2;
-  border-radius: 50% 50% 50% 50%;
-  margin: 0 auto -3em;
-  position: relative;
+  display: none;
+  @include desktop {
+    display: block;
+    height: 95px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 50% 50% 50% 50%;
+    margin: 0 auto -3em;
+    position: relative;
+  }
 }
 
 section.about {
   background-color: color(primary);
   .inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 33em;
+    width: 80%;
     @include desktop {
-      display: flex;
-      width: 60.5em;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin: auto;
+      max-width: 60.5em;
       padding: 5.5em 0;
     }
     h2 {
@@ -140,8 +161,9 @@ section.about {
     }
     p {
       color: #fff;
+      font-size: 0.9em;
+      line-height: 1.5em;
       @include desktop {
-        line-height: 1.5em;
         letter-spacing: 0.03em;
         font-size: 1.1em;
       }
@@ -156,30 +178,40 @@ section.about {
     }
   }
   section.cards {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
     @include desktop {
-      display: flex;
-      width: 78.5em;
       flex-direction: row;
-      align-items: center;
-      text-align: center;
-      margin: auto;
-      padding: 0;
-      justify-content: space-around;
-      align-items: flex-start;
+      max-width: 78.5em;
+      width: 90%;
     }
     .card {
       border-radius: 0.7em;
       background-color: color(secondary);
       padding: 1em;
+      width: 22em;
+      height: 27.5em;
+      margin: 2em 0em 0em;
+      &:last-child {
+        margin-bottom: -25em;
+      }
       @include desktop {
         width: 22em;
         height: 27.5em;
         margin: 0 0.8em -12em;
+        &:last-child {
+          margin-bottom: -12em;
+        }
       }
       i {
         color: color(primary);
         margin: 0.5em 0em;
-        font-size:2.5em;
+        font-size: 2.5em;
       }
 
       h3 {
@@ -187,14 +219,14 @@ section.about {
         margin: 0em 0 0;
       }
       h4 {
-        color: color(primary);
         margin: 1em 0 0.2em;
+        color: color(primary);
         font-weight: 600;
       }
       p {
         color: #fff;
+        margin: 0;
         @include desktop {
-          margin: 0;
           line-height: 1.6em;
         }
       }
@@ -203,8 +235,9 @@ section.about {
 }
 
 section.my-work {
+  text-align: center;
+  margin: 28em 0 0;
   @include desktop {
-    text-align: center;
     margin: 15em 0 0;
   }
   h1 {
@@ -226,37 +259,59 @@ section.my-work {
     }
   }
   .inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     @include desktop {
-      display: flex;
       align-items: flex-end;
-      .left {
+      flex-direction: row;
+    }
+    .left {
+      @include desktop {
         width: 57%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        img {
-          width: 1084px;
+      }
+      img {
+        width: 400px;
+        margin-top: 1em;
+        @include desktop {
+          margin-top: 0em;
+          width: 100%;
+          max-width: 1084px;
         }
-        .buttons {
-          display: flex;
-          flex-direction: row;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        @include desktop {
           justify-content: center;
-          align-items: center;
-          .button {
+        }
+        .button {
+          @include desktop {
             margin: 0 0.5em;
           }
         }
       }
-      .right {
-        display: flex;
-        width: 35%;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 auto -5em;
+      width: 35%;
+      @include desktop {
         margin: 0 auto;
-        align-items: center;
-        flex-direction: column;
-        ul {
+      }
+      ul {
+        font-weight: 500;
+        line-height: 2em;
+        margin: 3em 0 1em;
+        @include desktop {
           margin: 0 0 10em;
-          font-weight: 500;
-          line-height: 2em;
         }
       }
     }
@@ -265,24 +320,31 @@ section.my-work {
 
 section.project-tools {
   background-color: color(secondary);
+  position: relative;
+  border-radius: 0.7em;
+  margin: 9em auto -2.5em;
+  padding: 0.5em 0.2em;
+  max-width: 30em;
+  width: 80%;
   @include desktop {
-    position: relative;
-    border-radius: 0.7em;
-    width: 48em;
-    margin: 9em auto -2.5em;
-    padding: 0.5em 0.2em;
+    max-width: 48em;
   }
   ul {
-    @include desktop {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      li {
-        margin: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    li {
+      margin: 0.5em;
+      width: 3.5em;
+      height: 3em;
+      @include desktop {
         width: 6em;
         height: 5.5em;
-        i {
-          color: color(primary);
+      }
+      i {
+        color: color(primary);
+        font-size: 3em;
+        @include desktop {
           font-size: 5.5em;
         }
       }
@@ -292,49 +354,71 @@ section.project-tools {
 
 section.YouTube {
   background-color: color(primary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
   @include desktop {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: row;
   }
   .right-iframe-container {
+    margin: 0em auto -5em;
+    position: relative;
+    width: 20em;
+    height: 11.7em;
+    @include desktop {
+      height: 25em;
+      // padding-bottom: 32%;
+      width: 42.5em;
       margin: 5rem 0 -5rem 5rem;
-      position:relative;
-      width:100%;
-      height:0;
-      padding-bottom: 32%;
-      iframe {
-        position:absolute;
-        top: 0;
-        left: 0;
-        width:100%;
-        height: 100%;
-      }
     }
+    @include youtube {
+      height: 17.6em;
+      width: 30em;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .left {
     text-align: center;
+    margin: 5em auto 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22em;
     @include desktop {
       margin: 7em 2em 5em 7em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     p {
       color: color(secondary);
       font-weight: 500;
-      font-size: 1.2em;
+      font-size: 1.1em;
       letter-spacing: 0.2em;
+      @include desktop {
+        font-size: 1.2em;
+      }
     }
     h2 {
       color: #fff;
       margin: 0;
-      font-size: 2.5em;
-      width: 10em;
+      font-size: 2em;
+      @include desktop {
+        font-size: 2.5em;
+        width: 10em;
+      }
     }
     .button {
       margin: 1em 0 0;
-      font-size: 1.3em;
       padding: $wbutpad $hbutpad;
+      @include desktop {
+        font-size: 1.3em;
+      }
     }
   }
 }
@@ -342,42 +426,58 @@ section.YouTube {
 section#contact {
   background-color: color(secondary);
   .inner {
-    @include desktop {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 8em 0 3em;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em 0 3em;
+    text-align: center;
     h3 {
       color: #fff;
       margin: 0;
       padding: 0;
-      font-size: 2em;
+      font-size: 1.4em;
+      @include desktop {
+        font-size: 2em;
+      }
     }
     p.subtext {
       color: #fff;
-      font-size: 1.2em;
+      font-size: 0.9em;
+      @include desktop {
+        font-size: 1.2em;
+      }
     }
     .form {
       color: color(primary);
-      width: 40em;
-      padding: 1.5em 0 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      text-align: left;
+      width: 20em;
+      @include desktop {
+        width: 40em;
+        padding: 1.5em 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
       .name {
-        width: 47%;
-        min-height: 4em;
-        padding: 0 0 1em;
+        @include desktop {
+          width: 47%;
+          min-height: 4em;
+          padding: 0 0 1em;
+        }
       }
       .email {
-        width: 47%;
-        min-height: 4em;
-        padding: 0 0 1em;
+        @include desktop {
+          width: 47%;
+          min-height: 4em;
+          padding: 0 0 1em;
+        }
       }
       .message {
-        width: 100%;
-        min-height: 12em;
+        min-height: 6em;
+        @include desktop {
+          width: 100%;
+          min-height: 12em;
+        }
       }
       input {
         background-color: color(secondary);
@@ -385,9 +485,14 @@ section#contact {
         width: 100%;
         border-radius: 0.2em;
         color: #fff;
-        padding: 0.3em 0.3em 0.3em 0.5em;
+        @include desktop {
+          padding: 0.3em 0.3em 0.3em 0.5em;
+        }
         &.input-message {
-          padding: 0.3em 0.3em 10em 0.5em;
+          padding: 0.3em 0.3em 6em 0.5em;
+          @include desktop {
+            padding: 0.3em 0.3em 10em 0.5em;
+          }
         }
         &:hover {
           border: 3px solid color(primary);
@@ -399,47 +504,71 @@ section#contact {
       }
     }
     .contact-button {
-      text-align: center;
-      font-size: 1.4em;
-      font-weight: 700;
-      padding: $wbutpad $hbutpad;
+      padding: $wbutpad/1.5 $hbutpad/1.5;
       margin: 1em 0 0;
+      font-size: 1em;
+      font-weight: 700;
+      @include desktop {
+        text-align: center;
+        font-size: 1.4em;
+        margin: 1em 0 0;
+      }
     }
   }
   .suggestions {
     background-color: color(primary-accent);
+    position: relative;
+    border-radius: 0.7em;
+    max-width: 30em;
+    margin: 1em auto -3.5em;
+    padding: 0.5em 0.2em;
+    width: 90%;
     @include desktop {
-      position: relative;
-      border-radius: 0.7em;
-      width: 52em;
-      margin: 1em auto -3.5em;
-      padding: 0.5em 0.2em;
+      max-width: 52em;
     }
     .inner2 {
       color: #fff;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
       text-align: center;
-      padding: 2em 2em;
+      padding: 1.2em 1.2em;
+      @include desktop {
+        flex-direction: row;
+        padding: 2em 2em;
+      }
       .left {
-        font-size: 1.5em;
         font-weight: 500;
+        font-size: 1.4em;
+        padding-bottom: 0.2em;
+        @include desktop {
+          padding-bottom: 0em;
+          font-size: 1.5em;
+        }
+      }
+      .right {
+        font-size: 0.9em;
+        @include desktop {
+          font-size: 1em;
+        }
       }
     }
   }
 }
 footer {
   background-color: color(primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   @include desktop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
   .inner {
-    margin: 6em auto 1em;
+    margin: 5em auto 1em;
+    @include desktop {
+      margin: 6em auto 1em;
+    }
   }
   p {
     color: #fff;
@@ -452,24 +581,36 @@ footer {
   }
   .social {
     ul {
-      padding: 2em;
+      padding: 2em 1em;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      @include desktop {
+        justify-content: space-evenly;
+      }
       li {
         border: 2px color(tertiary) solid;
-        width: 1.7em;
-        height: 1.7em;
         border-radius: 2em;
+        width: 1.8em;
+        height: 1.8em;
+        position: relative;
+        @include desktop {
+          width: 2em;
+          height: 2em;
+        }
       }
       i {
-        width: 1em;
         color: #fff;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
       }
     }
   }
   .credits {
     color: color(tertiary);
+    font-size: 1em;
     @include desktop {
       font-size: 1em;
     }
@@ -482,7 +623,10 @@ footer {
   border-radius: $radius;
   padding: $wbutpad $hbutpad;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1em;
+  @include desktop {
+    font-size: 1.2em;
+  }
   &:hover {
     background-color: color(primary-hover);
   }
@@ -493,7 +637,10 @@ footer {
   border-radius: $radius;
   padding: $wbutpad $hbutpad;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1em;
+  @include desktop {
+    font-size: 1.2em;
+  }
   &:hover {
     color: #fff;
     background-color: color(primary);
