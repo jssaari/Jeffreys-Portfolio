@@ -617,6 +617,161 @@ footer {
   }
 }
 
+//MY WORK LANDING PAGE START
+
+section.my-work-landing {
+  background-color: color(primary);
+  text-align: center;
+  margin: 0;
+  padding: 3em 0 0;
+  @include desktop {
+  }
+  h1 {
+    color: white;
+    margin: 0;
+    font-size: 2.5em;
+    @include desktop {
+      font-size: 4em;
+    }
+  }
+  h3 {
+    color: color(secondary);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin: 0;
+    @include desktop {
+      font-size: 1.7em;
+      margin: -0.5em 0 1.5em;
+    }
+  }
+  .inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0 10em;
+    @include desktop {
+      align-items: flex-end;
+      flex-direction: row;
+    }
+    .left {
+      @include desktop {
+        width: 57%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .empty.dark {
+          background-color: color(primary);
+          color: color(secondary);
+          border-color: color(secondary);
+          &:hover {
+            background-color: color(secondary);
+            color: white;
+          }
+        }
+      }
+      img {
+        width: 400px;
+        margin-top: 1em;
+        @include desktop {
+          margin-top: 0em;
+          width: 100%;
+          max-width: 1084px;
+        }
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        @include desktop {
+          justify-content: center;
+        }
+        .button {
+          margin: 1.5em 0em 0em;
+          @include desktop {
+            margin: 2em 0em 1em;
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 auto -5em;
+      width: 35%;
+      @include desktop {
+        margin: 0 auto;
+      }
+      ul {
+        color: white;
+        font-weight: 400;
+        line-height: 1.7em;
+        margin: 3em 0 1em;
+        @include desktop {
+          font-weight: 500;
+          margin: 0 0 10em;
+        }
+      }
+      .button {
+        margin: 0.5em 0em 0em;
+        @include desktop {
+          margin: 2em 0em 1em;
+        }
+      }
+      .empty.dark {
+        background-color: color(primary);
+        color: color(secondary);
+        border-color: color(secondary);
+        &:hover {
+          background-color: color(secondary);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+section.ptools-work-landing {
+  background-color: color(secondary);
+  position: relative;
+  border-radius: 0.7em;
+  padding: 0.5em 0.2em;
+  max-width: 30em;
+  width: 80%;
+  margin: -2.5em auto 0em;
+  @include desktop {
+    margin: -4em auto 0em;
+    max-width: 48em;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    li {
+      margin: 0.5em;
+      width: 3.5em;
+      height: 3em;
+      @include desktop {
+        width: 6em;
+        height: 5.5em;
+      }
+      i {
+        color: color(primary);
+        font-size: 3em;
+        @include desktop {
+          font-size: 5.5em;
+        }
+      }
+    }
+  }
+}
+
+//MY WORK LANDING PAGE END
+
+//MISCELLANEOUS STYLES
+
 .filled {
   background-color: color(primary);
   color: #fff;
@@ -629,6 +784,7 @@ footer {
   }
   &:hover {
     background-color: color(primary-hover);
+    transition: 0.2s;
   }
 }
 .empty {
@@ -644,6 +800,7 @@ footer {
   &:hover {
     color: #fff;
     background-color: color(primary);
+    transition: 0.2s;
     border-color: color(primary);
   }
 }
@@ -652,6 +809,7 @@ footer {
   background-color: color(secondary);
   &:hover {
     background-color: color(secondary-hover);
+    transition: 0.2s;
   }
 }
 footer {
