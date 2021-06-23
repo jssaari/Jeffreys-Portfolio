@@ -2,15 +2,16 @@
 body,
 html {
   height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-transition: scroll-behavior 5s ease 1s;
+  transition: scroll-behavior 5s ease 1s;
 }
 
 body {
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
   background-color: #f2f2f2;
-  scroll-behavior: smooth;
-  -webkit-transition: ease-in-out 0.2s;
-  transition: ease-in-out 0.2s;
+  overflow-y: scroll;
 }
 
 header {
@@ -29,9 +30,6 @@ header {
 
 @media (min-width: 840px) {
   header {
-    scroll-behavior: smooth;
-    -webkit-transition: ease-in-out 0.2s;
-    transition: ease-in-out 0.2s;
     width: 100%;
     margin: auto;
   }
@@ -59,12 +57,19 @@ header .logo {
 
 header .nav ul li a {
   text-decoration: none;
-  color: inherit;
-  font-weight: 500;
+  color: black;
+  font-weight: 600;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 header .nav ul li a:hover {
-  font-weight: 600;
+  opacity: 1;
+}
+
+header .button-container {
+  margin: 0.5em 0;
 }
 
 header .nav-button {
@@ -124,9 +129,12 @@ section.hero p {
   }
 }
 
+section.hero .button-container {
+  margin: 1em 0 0;
+}
+
 @media (min-width: 840px) {
   section.hero .hero-button {
-    margin: 0.7em 0 0;
     padding: 0.4em 1.2em;
   }
 }
@@ -192,9 +200,12 @@ section.about .inner p {
   }
 }
 
+section.about .inner .button-container {
+  margin: 1.5em 0 0;
+}
+
 section.about .inner .about-button {
   background-color: #142a40;
-  margin: 1.5em 0 0;
   padding: 0.3em 1em;
 }
 
@@ -374,6 +385,12 @@ section.my-work .inner .left img {
   }
 }
 
+@media (min-width: 840px) {
+  section.my-work .inner .left .button-container {
+    margin: 0 0.5em;
+  }
+}
+
 section.my-work .inner .left .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -398,10 +415,8 @@ section.my-work .inner .left .buttons {
   }
 }
 
-@media (min-width: 840px) {
-  section.my-work .inner .left .buttons .button {
-    margin: 0 0.5em;
-  }
+section.my-work .inner .left .buttons .filled {
+  padding: 0.3em 1em;
 }
 
 section.my-work .inner .right {
@@ -514,36 +529,6 @@ section.YouTube {
   }
 }
 
-section.YouTube .right-iframe-container {
-  margin: 0em auto -5em;
-  position: relative;
-  width: 20em;
-  height: 11.7em;
-}
-
-@media (min-width: 840px) {
-  section.YouTube .right-iframe-container {
-    height: 25em;
-    width: 42.5em;
-    margin: 5rem 0 -5rem 5rem;
-  }
-}
-
-@media (max-width: 1240px) {
-  section.YouTube .right-iframe-container {
-    height: 17.6em;
-    width: 30em;
-  }
-}
-
-section.YouTube .right-iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 section.YouTube .left {
   text-align: center;
   margin: 5em auto 3em;
@@ -592,8 +577,11 @@ section.YouTube .left h2 {
   }
 }
 
-section.YouTube .left .button {
+section.YouTube .left .button-container {
   margin: 1em 0 0;
+}
+
+section.YouTube .left .button {
   padding: 0.2em 1em;
 }
 
@@ -601,6 +589,36 @@ section.YouTube .left .button {
   section.YouTube .left .button {
     font-size: 1.3em;
   }
+}
+
+section.YouTube .right-iframe-container {
+  margin: 0em auto -5em;
+  position: relative;
+  width: 20em;
+  height: 11.7em;
+}
+
+@media (min-width: 840px) {
+  section.YouTube .right-iframe-container {
+    height: 25em;
+    width: 42.5em;
+    margin: 5rem 0 -5rem 5rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  section.YouTube .right-iframe-container {
+    height: 17.6em;
+    width: 30em;
+  }
+}
+
+section.YouTube .right-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 section#contact {
@@ -727,9 +745,12 @@ section#contact .inner .form input:focus-visible {
   border: 3px solid #3c88d4;
 }
 
+section#contact .inner .button-container {
+  margin: 1em 0 0;
+}
+
 section#contact .inner .contact-button {
   padding: 0.13333em 0.66667em;
-  margin: 1em 0 0;
   font-size: 1em;
   font-weight: 700;
 }
@@ -738,7 +759,6 @@ section#contact .inner .contact-button {
   section#contact .inner .contact-button {
     text-align: center;
     font-size: 1.4em;
-    margin: 1em 0 0;
   }
 }
 
@@ -1202,6 +1222,7 @@ section.ptools-work-landing ul li i {
 footer {
   margin: 0;
   padding: 0;
+  z-index: 10;
 }
 
 p {

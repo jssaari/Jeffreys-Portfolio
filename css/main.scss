@@ -10,8 +10,8 @@ $colors: (
 );
 
 $padding: 1em;
-$wbutpad: 0.2em;
-$hbutpad: 1em;
+$ybutpad: 0.2em;
+$xbutpad: 1em;
 $radius: 1.1em;
 
 @function color($color-name) {
@@ -35,14 +35,15 @@ $youtube: 1240px;
 body,
 html {
   height: 100vh;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 5s ease 1s;
 }
 
 body {
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
   background-color: color(off-white);
-  scroll-behavior: smooth;
-  transition: ease-in-out 0.2s;
+  overflow-y: scroll;
 }
 
 header {
@@ -52,8 +53,6 @@ header {
   justify-content: space-evenly;
   align-items: center;
   @include desktop {
-    scroll-behavior: smooth;
-    transition: ease-in-out 0.2s;
     width: 100%;
     margin: auto;
   }
@@ -73,19 +72,22 @@ header {
         }
         a {
           text-decoration: none;
-          color: inherit;
-          font-weight: 500;
+          color: black;
+          font-weight: 600;
+          opacity: 0.8;
+          transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
           &:hover {
-            font-weight: 600;
+            opacity: 1;
           }
         }
       }
     }
   }
+  .button-container {
+    margin: 0.5em 0;
+  }
   .nav-button {
     font-weight: 700;
-    @include desktop {
-    }
   }
 }
 
@@ -122,9 +124,11 @@ section.hero {
       font-size: 1.2em;
     }
   }
+  .button-container {
+    margin: 1em 0 0;
+  }
   .hero-button {
     @include desktop {
-      margin: 0.7em 0 0;
       padding: 0.4em 1.2em;
     }
   }
@@ -168,9 +172,11 @@ section.about {
         font-size: 1.1em;
       }
     }
+    .button-container {
+      margin: 1.5em 0 0;
+    }
     .about-button {
       background-color: color(secondary);
-      margin: 1.5em 0 0;
       padding: 0.3em 1em;
       &:hover {
         background-color: color(secondary-hover);
@@ -282,6 +288,11 @@ section.my-work {
           max-width: 1084px;
         }
       }
+      .button-container {
+        @include desktop {
+          margin: 0 0.5em;
+        }
+      }
       .buttons {
         display: flex;
         flex-direction: row;
@@ -290,10 +301,8 @@ section.my-work {
         @include desktop {
           justify-content: center;
         }
-        .button {
-          @include desktop {
-            margin: 0 0.5em;
-          }
+        .filled {
+          padding: 0.3em $xbutpad;
         }
       }
     }
@@ -361,29 +370,6 @@ section.YouTube {
   @include desktop {
     flex-direction: row;
   }
-  .right-iframe-container {
-    margin: 0em auto -5em;
-    position: relative;
-    width: 20em;
-    height: 11.7em;
-    @include desktop {
-      height: 25em;
-      // padding-bottom: 32%;
-      width: 42.5em;
-      margin: 5rem 0 -5rem 5rem;
-    }
-    @include youtube {
-      height: 17.6em;
-      width: 30em;
-    }
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
 
   .left {
     text-align: center;
@@ -413,12 +399,36 @@ section.YouTube {
         width: 10em;
       }
     }
-    .button {
+    .button-container {
       margin: 1em 0 0;
-      padding: $wbutpad $hbutpad;
+    }
+    .button {
+      padding: $ybutpad $xbutpad;
       @include desktop {
         font-size: 1.3em;
       }
+    }
+  }
+  .right-iframe-container {
+    margin: 0em auto -5em;
+    position: relative;
+    width: 20em;
+    height: 11.7em;
+    @include desktop {
+      height: 25em;
+      width: 42.5em;
+      margin: 5rem 0 -5rem 5rem;
+    }
+    @include youtube {
+      height: 17.6em;
+      width: 30em;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -503,15 +513,16 @@ section#contact {
         }
       }
     }
-    .contact-button {
-      padding: $wbutpad/1.5 $hbutpad/1.5;
+    .button-container {
       margin: 1em 0 0;
+    }
+    .contact-button {
+      padding: $ybutpad/1.5 $xbutpad/1.5;
       font-size: 1em;
       font-weight: 700;
       @include desktop {
         text-align: center;
         font-size: 1.4em;
-        margin: 1em 0 0;
       }
     }
   }
@@ -776,7 +787,7 @@ section.ptools-work-landing {
   background-color: color(primary);
   color: #fff;
   border-radius: $radius;
-  padding: $wbutpad $hbutpad;
+  padding: $ybutpad $xbutpad;
   font-weight: 600;
   font-size: 1em;
   @include desktop {
@@ -791,7 +802,7 @@ section.ptools-work-landing {
   color: color(primary);
   border-style: solid;
   border-radius: $radius;
-  padding: $wbutpad $hbutpad;
+  padding: $ybutpad $xbutpad;
   font-weight: 600;
   font-size: 1em;
   @include desktop {
@@ -815,6 +826,7 @@ section.ptools-work-landing {
 footer {
   margin: 0;
   padding: 0;
+  z-index: 10;
 }
 p {
   margin: 0;
