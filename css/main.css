@@ -582,7 +582,7 @@ section.YouTube .left .button-container {
 }
 
 section.YouTube .left .button {
-  padding: 0.2em 1em;
+  padding: 0.3em 1em;
 }
 
 @media (min-width: 840px) {
@@ -1046,12 +1046,16 @@ section.my-work-landing .inner .left .buttons {
   }
 }
 
-section.my-work-landing .inner .left .buttons .button {
+section.my-work-landing .inner .left .buttons .filled {
+  padding: 0.3em 1em;
+}
+
+section.my-work-landing .inner .left .buttons .button-container {
   margin: 1.5em 0em 0em;
 }
 
 @media (min-width: 840px) {
-  section.my-work-landing .inner .left .buttons .button {
+  section.my-work-landing .inner .left .buttons .button-container {
     margin: 2em 0em 1em;
   }
 }
@@ -1091,14 +1095,18 @@ section.my-work-landing .inner .right ul {
   }
 }
 
-section.my-work-landing .inner .right .button {
+section.my-work-landing .inner .right .button-container {
   margin: 0.5em 0em 0em;
 }
 
 @media (min-width: 840px) {
-  section.my-work-landing .inner .right .button {
+  section.my-work-landing .inner .right .button-container {
     margin: 2em 0em 1em;
   }
+}
+
+section.my-work-landing .inner .right .button {
+  padding: 0.3em 1em;
 }
 
 section.my-work-landing .inner .right .empty.dark {
@@ -1163,6 +1171,31 @@ section.ptools-work-landing ul li i {
   section.ptools-work-landing ul li i {
     font-size: 5.5em;
   }
+}
+
+section.recent-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.recent-work h3 {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #142a40;
+}
+
+section.recent-work .cards {
+  display: -ms-grid;
+  display: grid;
 }
 
 .filled {

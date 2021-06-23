@@ -403,7 +403,7 @@ section.YouTube {
       margin: 1em 0 0;
     }
     .button {
-      padding: $ybutpad $xbutpad;
+      padding: 0.3em $xbutpad;
       @include desktop {
         font-size: 1.3em;
       }
@@ -698,7 +698,10 @@ section.my-work-landing {
         @include desktop {
           justify-content: center;
         }
-        .button {
+        .filled {
+          padding: 0.3em $xbutpad;
+        }
+        .button-container {
           margin: 1.5em 0em 0em;
           @include desktop {
             margin: 2em 0em 1em;
@@ -725,11 +728,14 @@ section.my-work-landing {
           margin: 0 0 10em;
         }
       }
-      .button {
+      .button-container {
         margin: 0.5em 0em 0em;
         @include desktop {
           margin: 2em 0em 1em;
         }
+      }
+      .button {
+        padding: 0.3em $xbutpad;
       }
       .empty.dark {
         background-color: color(primary);
@@ -776,6 +782,21 @@ section.ptools-work-landing {
         }
       }
     }
+  }
+}
+
+section.recent-work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: color(secondary);
+  }
+  .cards {
+    display: grid;
   }
 }
 

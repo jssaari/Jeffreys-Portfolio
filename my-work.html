@@ -11,6 +11,8 @@
       src="https://kit.fontawesome.com/2e79be8357.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <header>
@@ -22,21 +24,25 @@
           <li><a href="https://www.youtube.com">YouTube</a></li>
         </ul>
       </div>
-      <div class="nav-button empty"><a href="#contact">Contact</a></div>
+      <div class="button-container">
+        <a class="nav-button empty" href="#contact">Contact</a>
+      </div>
     </header>
     <main>
       <section class="my-work-landing">
-        <h1>Campus Revive</h1>
-        <h3>Highlighted Project</h3>
+        <h1 class="g-my-work">Campus Revive</h1>
+        <h3 class="g-my-work">Highlighted Project</h3>
         <div class="inner">
           <div class="left">
-            <img src="assets/campusrevive.org_.png" alt="Campus Revive Photo" />
-            <div class="buttons">
-              <div class="button filled dark"><a href="#">Visit Site</a></div>
+            <img src="assets/campusrevive.org_.png" alt="Campus Revive Photo" class="gsap-my-work-img" />
+            <div class="buttons g-buttons">
+              <div class="button-container">
+                <a class="button filled dark" href="#">Visit Site</a>
+              </div>
             </div>
           </div>
           <div class="right">
-            <ul>
+            <ul class="g-my-work-right">
               <li>Thing I learned</li>
               <li>Thing I learn</li>
               <li>Thing I learned learned</li>
@@ -45,13 +51,13 @@
               <li>Thing I</li>
               <li>Thing I Thing I learned</li>
             </ul>
-            <div class="button filled dark">
-              <a href="https://www.youtube.com">Watch Video</a>
+            <div class="button-container g-buttons">
+              <a class="button filled dark" href="https://www.youtube.com">Watch Video</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="ptools-work-landing">
+      <section class="ptools-work-landing g-tools">
         <ul>
           <li><i class="fab fa-html5" alt="HTML"></i></li>
           <li><i class="fab fa-css3-alt" alt="CSS"></i></li>
@@ -113,23 +119,25 @@
       </section>
       <section id="contact">
         <div class="inner">
-          <h3>Interested in Working Together?</h3>
-          <p class="subtext">(I read all of the emails I receive)</p>
+          <h3 class="g-form">Interested in Working Together?</h3>
+          <p class="subtext g-form">(I read all of the emails I receive)</p>
           <div class="form">
-            <div class="name">
+            <div class="name g-form">
               <p>Name</p>
               <input type="text" class="input-name" />
             </div>
-            <div class="email">
+            <div class="email g-form">
               <p>Email</p>
               <input type="text" class="input-email" />
             </div>
-            <div class="message">
+            <div class="message g-form">
               <p>Message</p>
               <input type="text" class="input-message" />
             </div>
           </div>
-          <div class="contact-button empty">Contact</div>
+          <div class="button-container g-form">
+            <a class="contact-button empty" href="">Contact</a>
+          </div>
         </div>
         <div class="suggestions">
           <div class="inner2">
@@ -143,8 +151,10 @@
       </section>
       <footer>
         <div class="inner">
-          <p class="tagline">Let's be friends! Connect with me here:</p>
-          <div class="social">
+          <p class="tagline g-footer">
+            Let's be friends! Connect with me here:
+          </p>
+          <div class="social g-footer">
             <ul>
               <li>
                 <a href="https://github.com/jssaari">
@@ -168,11 +178,97 @@
               </li>
             </ul>
           </div>
-          <p class="credits">
-            Created from scratch by <a href="/index.html">Jeffrey Saari</a>
+          <p class="credits g-footer">
+            Created from scratch by <a href="#">Jeffrey Saari</a>
           </p>
         </div>
       </footer>
     </main>
   </body>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.gsap-my-work-img', {
+      scrollTrigger: {
+        trigger: '.gsap-my-work-img',
+        start: 'top center+=100',
+      },
+      opacity: 0,
+      duration: 2,
+      x: -600,
+      ease: 'power2.out',
+    });
+    gsap.from('.g-my-work-right', {
+      scrollTrigger: {
+        trigger: '.g-my-work-right',
+        start: 'top center+=100',
+      },
+      opacity: 0,
+      duration: 2,
+      x: 600,
+      ease: 'power2.out',
+    });
+    gsap.from('.g-buttons', {
+      scrollTrigger: {
+        trigger: '.g-buttons',
+        start: 'top center+=200',
+      },
+      opacity: 0,
+      duration: 2,
+      scale: 0,
+      ease: 'power2.out',
+    });
+    gsap.from('.g-my-work', {
+      scrollTrigger: {
+        trigger: '.g-my-work',
+        start: 'top center+=100',
+      },
+      stagger: 0.3,
+      opacity: 0,
+      duration: 1,
+      y: -50,
+      ease: 'power2.out',
+    });
+    gsap.from('.g-tools', {
+      scrollTrigger: {
+        trigger: '.g-tools',
+        start: 'top center+=250',
+      },
+      opacity: 0,
+      duration: 1,
+      y: 100,
+      ease: 'power4.out',
+    });
+    gsap.from('.g-form', {
+      scrollTrigger: {
+        trigger: '.g-form',
+        start: 'top center+=250',
+      },
+      stagger: 0.3,
+      opacity: 0,
+      duration: 1.5,
+      y: 100,
+      ease: 'power2.out',
+    });
+    gsap.from('.suggestions', {
+      scrollTrigger: {
+        trigger: '.suggestions',
+        start: 'top center+=250',
+      },
+      opacity: 0,
+      duration: 1,
+      y: 100,
+      ease: 'power4.out',
+    });
+    gsap.from('.g-footer', {
+      scrollTrigger: {
+        trigger: '.suggestions',
+        start: 'top bottom',
+      },
+      stagger: 0.3,
+      opacity: 0,
+      duration: 1,
+      y: -100,
+      ease: 'power2.out',
+    });
+  </script>
 </html>
