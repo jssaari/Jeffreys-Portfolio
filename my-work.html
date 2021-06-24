@@ -34,11 +34,13 @@
         <h3 class="g-my-work">Highlighted Project</h3>
         <div class="inner">
           <div class="left">
-            <img src="assets/campusrevive.org_.png" alt="Campus Revive Photo" class="gsap-my-work-img" />
-            <div class="buttons g-buttons">
-              <div class="button-container">
-                <a class="button filled dark" href="#">Visit Site</a>
-              </div>
+            <img
+              src="assets/campusrevive.org_.png"
+              alt="Campus Revive Photo"
+              class="gsap-my-work-img"
+            />
+            <div class="buttons">
+              <a class="button filled dark g-buttons" href="#">Visit Site</a>
             </div>
           </div>
           <div class="right">
@@ -51,9 +53,11 @@
               <li>Thing I</li>
               <li>Thing I Thing I learned</li>
             </ul>
-            <div class="button-container g-buttons">
-              <a class="button filled dark" href="https://www.youtube.com">Watch Video</a>
-            </div>
+            <a
+              class="button filled dark g-buttons"
+              href="https://www.youtube.com"
+              >Watch Video</a
+            >
           </div>
         </div>
       </section>
@@ -67,55 +71,51 @@
         </ul>
       </section>
       <section class="recent-work">
-          <h3>Recent Work</h3>
-          <div class="cards">
-              <div class="card">
-                  <img src="#" alt="">
-                  <div class="attributes">
-                      <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                  </div>
-                  <div class="buttons">
-                    <button class="filled"></button>
-                    <button class="empty"></button>
-                </div>
-                <div class="card">
-                    <img src="#" alt="">
-                    <div class="attributes">
-                        <ul>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                      </ul>
-                    </div>
-                    <div class="buttons">
-                      <button class="filled"></button>
-                      <button class="empty"></button>
-                  </div>
-                  <div class="card">
-                    <img src="#" alt="">
-                    <div class="attributes">
-                        <ul>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                      </ul>
-                    </div>
-                    <div class="buttons">
-                      <button class="filled"></button>
-                      <button class="empty"></button>
-                  </div>
-              </div>
+        <h3>Recent Work</h3>
+        <div class="cards">
+          <div class="card">
+            <img src="#" alt="" />
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>PHP</li>
+              <li>WordPress</li>
+            </ul>
+            <div class="buttons">
+              <button class="filled"></button>
+              <button class="empty"></button>
+            </div>
           </div>
+          <div class="card">
+            <img src="#" alt="" />
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>PHP</li>
+              <li>WordPress</li>
+            </ul>
+            <div class="buttons">
+              <button class="filled"></button>
+              <button class="empty"></button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="#" alt="" />
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>PHP</li>
+              <li>WordPress</li>
+            </ul>
+            <div class="buttons">
+              <button class="filled"></button>
+              <button class="empty"></button>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="contact">
         <div class="inner">
@@ -135,9 +135,7 @@
               <input type="text" class="input-message" />
             </div>
           </div>
-          <div class="button-container g-form">
-            <a class="contact-button empty" href="">Contact</a>
-          </div>
+          <a class="contact-button empty g-form" href="">Contact</a>
         </div>
         <div class="suggestions">
           <div class="inner2">
@@ -194,7 +192,7 @@
       },
       opacity: 0,
       duration: 2,
-      x: -600,
+      x: -100,
       ease: 'power2.out',
     });
     gsap.from('.g-my-work-right', {
@@ -204,7 +202,7 @@
       },
       opacity: 0,
       duration: 2,
-      x: 600,
+      x: 100,
       ease: 'power2.out',
     });
     gsap.from('.g-buttons', {
@@ -213,8 +211,8 @@
         start: 'top center+=200',
       },
       opacity: 0,
-      duration: 2,
-      scale: 0,
+      duration: 1,
+      y: -50,
       ease: 'power2.out',
     });
     gsap.from('.g-my-work', {
@@ -235,18 +233,18 @@
       },
       opacity: 0,
       duration: 1,
-      y: 100,
-      ease: 'power4.out',
+      y: 50,
+      ease: 'power2.out',
     });
     gsap.from('.g-form', {
       scrollTrigger: {
         trigger: '.g-form',
         start: 'top center+=250',
       },
-      stagger: 0.3,
+      stagger: 0.2,
       opacity: 0,
-      duration: 1.5,
-      y: 100,
+      duration: 1,
+      y: 50,
       ease: 'power2.out',
     });
     gsap.from('.suggestions', {
@@ -256,8 +254,8 @@
       },
       opacity: 0,
       duration: 1,
-      y: 100,
-      ease: 'power4.out',
+      y: 50,
+      ease: 'power2.out',
     });
     gsap.from('.g-footer', {
       scrollTrigger: {
@@ -267,7 +265,7 @@
       stagger: 0.3,
       opacity: 0,
       duration: 1,
-      y: -100,
+      y: -50,
       ease: 'power2.out',
     });
   </script>
