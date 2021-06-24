@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 $colors: (
   primary: #3c88d4,
-  primary-hover: #387fc5,
+  primary-hover: #2c70b4,
+  // primary-hover: #387fc5,
   primary-accent: #3675b4,
   secondary: #142a40,
-  secondary-hover: #0d1b29,
+  secondary-hover: #071625,
+  // secondary-hover: #0d1b29,
   tertiary: #cbdbfc,
   off-white: #f2f2f2,
 );
@@ -83,10 +85,8 @@ header {
       }
     }
   }
-  .button-container {
-    margin: 0.5em 0;
-  }
   .nav-button {
+    margin: 0.5em 0;
     font-weight: 700;
   }
 }
@@ -124,11 +124,9 @@ section.hero {
       font-size: 1.2em;
     }
   }
-  .button-container {
-    margin: 1em 0 0;
-  }
   .hero-button {
     @include desktop {
+      margin: 1em 0 0;
       padding: 0.4em 1.2em;
     }
   }
@@ -172,10 +170,8 @@ section.about {
         font-size: 1.1em;
       }
     }
-    .button-container {
-      margin: 1.5em 0 0;
-    }
     .about-button {
+      margin: 1.5em 0 0;
       background-color: color(secondary);
       padding: 0.3em 1em;
       &:hover {
@@ -288,11 +284,6 @@ section.my-work {
           max-width: 1084px;
         }
       }
-      .button-container {
-        @include desktop {
-          margin: 0 0.5em;
-        }
-      }
       .buttons {
         display: flex;
         flex-direction: row;
@@ -300,6 +291,9 @@ section.my-work {
         justify-content: space-evenly;
         @include desktop {
           justify-content: center;
+          .button {
+            margin: 0 0.5em;
+          }
         }
         .filled {
           padding: 0.3em $xbutpad;
@@ -399,10 +393,8 @@ section.YouTube {
         width: 10em;
       }
     }
-    .button-container {
-      margin: 1em 0 0;
-    }
     .button {
+      margin: 1em 0 0;
       padding: 0.3em $xbutpad;
       @include desktop {
         font-size: 1.3em;
@@ -513,10 +505,8 @@ section#contact {
         }
       }
     }
-    .button-container {
-      margin: 1em 0 0;
-    }
     .contact-button {
+      margin: 1em 0 0;
       padding: $ybutpad/1.5 $xbutpad/1.5;
       font-size: 1em;
       font-weight: 700;
@@ -600,22 +590,30 @@ footer {
         justify-content: space-evenly;
       }
       li {
-        border: 2px color(tertiary) solid;
         border-radius: 2em;
         width: 1.8em;
         height: 1.8em;
         position: relative;
         @include desktop {
-          width: 2em;
-          height: 2em;
+          &:hover {
+            border-color: white;
+          }
         }
-      }
-      i {
-        color: #fff;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
+        i {
+          border: 2px color(tertiary) solid;
+          border-radius: 2em;
+          padding: 0.5em 0.1em;
+          color: #fff;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          &:hover {
+            color: color(secondary);
+            transition: 0.3s;
+            background-color: white;
+            border-color: white;
+          }
+        }
       }
     }
   }
@@ -624,6 +622,12 @@ footer {
     font-size: 1em;
     @include desktop {
       font-size: 1em;
+    }
+    a {
+      transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+      &:hover {
+        color: white;
+      }
     }
   }
 }
@@ -695,17 +699,13 @@ section.my-work-landing {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        margin: 1.5em 0em 0em;
         @include desktop {
+          margin: 2em 0em 1em;
           justify-content: center;
         }
         .filled {
           padding: 0.3em $xbutpad;
-        }
-        .button-container {
-          margin: 1.5em 0em 0em;
-          @include desktop {
-            margin: 2em 0em 1em;
-          }
         }
       }
     }
@@ -728,14 +728,12 @@ section.my-work-landing {
           margin: 0 0 10em;
         }
       }
-      .button-container {
+      .button {
+        padding: 0.3em $xbutpad;
         margin: 0.5em 0em 0em;
         @include desktop {
           margin: 2em 0em 1em;
         }
-      }
-      .button {
-        padding: 0.3em $xbutpad;
       }
       .empty.dark {
         background-color: color(primary);
@@ -786,9 +784,7 @@ section.ptools-work-landing {
 }
 
 section.recent-work {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   h3 {
     font-size: 2em;
     font-weight: 500;
@@ -796,7 +792,28 @@ section.recent-work {
     color: color(secondary);
   }
   .cards {
-    display: grid;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .card {
+      margin: 0 1em 2em;
+      background-color: #142a40;
+      border-radius: 0.8em;
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 15em;
+        li {
+          background-color: #3c88d4;
+          padding: 0.1em 0.3em;
+          border-radius: 0.2em;
+          color: white;
+          margin: 0.5em 0.3em;
+        }
+      }
+    }
   }
 }
 
@@ -811,12 +828,13 @@ section.recent-work {
   padding: $ybutpad $xbutpad;
   font-weight: 600;
   font-size: 1em;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   @include desktop {
     font-size: 1.2em;
   }
   &:hover {
     background-color: color(primary-hover);
-    transition: 0.2s;
+    transition: 0.3s;
   }
 }
 .empty {
@@ -826,22 +844,24 @@ section.recent-work {
   padding: $ybutpad $xbutpad;
   font-weight: 600;
   font-size: 1em;
+  transition: background-color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   @include desktop {
     font-size: 1.2em;
   }
   &:hover {
     color: #fff;
     background-color: color(primary);
-    transition: 0.2s;
+    transition: 0.3s;
     border-color: color(primary);
   }
 }
 
 .dark {
+  transition: background-color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   background-color: color(secondary);
   &:hover {
     background-color: color(secondary-hover);
-    transition: 0.2s;
+    transition: 0.3s;
   }
 }
 footer {
@@ -866,9 +886,12 @@ ul {
 li {
   list-style: none;
 }
-img,
+img {
+  width: 100%;
+}
 i {
   width: 100%;
+  transition: background-color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 input {

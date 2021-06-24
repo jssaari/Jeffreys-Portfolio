@@ -24,9 +24,7 @@
           <li><a href="https://www.youtube.com">YouTube</a></li>
         </ul>
       </div>
-      <div class="button-container">
-        <a class="nav-button empty" href="#contact">Contact</a>
-      </div>
+      <a class="nav-button empty" href="#contact">Contact</a>
     </header>
     <main>
       <section class="hero">
@@ -35,9 +33,7 @@
           I specialize in fully custom websites from scratch. Looking to hire
           me? See what I love to do.
         </p>
-        <div class="button-container g-hero">
-          <a class="hero-button filled" href="#contact">Say Hello</a>
-        </div>
+        <a class="hero-button filled g-hero" href="#contact">Say Hello</a>
       </section>
       <div class="ellipse"></div>
       <section class="about">
@@ -51,9 +47,9 @@
             Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
             sadipscing elitr, sed diam nonumy
           </p>
-          <div class="button-container g-about">
-            <a class="about-button filled" href="/about-me.html">About Me</a>
-          </div>
+          <a class="about-button filled g-about" href="/about-me.html"
+            >About Me</a
+          >
         </div>
         <section class="cards">
           <div class="card g-card">
@@ -110,12 +106,8 @@
               alt="Campus Revive Photo"
             />
             <div class="buttons g-buttons">
-              <div class="button-container">
-                <a class="button empty" href="#">Visit Site</a>
-              </div>
-              <div class="button-container">
-                <a class="button filled" href="/my-work.html">See My Work</a>
-              </div>
+              <a class="button empty" href="#">Visit Site</a>
+              <a class="button filled" href="/my-work.html">See My Work</a>
             </div>
           </div>
           <div class="right">
@@ -128,11 +120,9 @@
               <li>Thing I</li>
               <li>Thing I Thing I learned</li>
             </ul>
-            <div class="button-container g-buttons">
-              <a class="button empty" href="https://www.youtube.com"
-                >Watch Video</a
-              >
-            </div>
+            <a class="button empty g-buttons" href="https://www.youtube.com"
+              >Watch Video</a
+            >
           </div>
         </div>
       </section>
@@ -149,11 +139,9 @@
         <div class="left">
           <p class="g-YouTube">How I made this website</p>
           <h2 class="g-YouTube">Check out my YouTube Channel!</h2>
-          <div class="button-container g-YouTube">
-            <a class="button filled dark" href="https://www.youtube.com"
-              >Visit Channel</a
-            >
-          </div>
+          <a class="button filled dark g-YouTube" href="https://www.youtube.com"
+            >Visit Channel</a
+          >
         </div>
         <div class="right-iframe-container">
           <iframe
@@ -185,9 +173,7 @@
               <input type="text" class="input-message" />
             </div>
           </div>
-          <div class="button-container g-form">
-            <a class="contact-button empty" href="">Contact</a>
-          </div>
+          <a class="contact-button empty g-form" href="">Contact</a>
         </div>
         <div class="suggestions">
           <div class="inner2">
@@ -207,22 +193,25 @@
           <div class="social g-footer">
             <ul>
               <li>
-                <a href="https://github.com/jssaari">
+                <a class="social-icons" href="https://github.com/jssaari">
                   <i class="fab fa-github"></i>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/jeffrey-saari-a7a8a2156/">
+                <a
+                  class="social-icons"
+                  href="https://www.linkedin.com/in/jeffrey-saari-a7a8a2156/"
+                >
                   <i class="fab fa-linkedin"></i>
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com">
+                <a class="social-icons" href="https://www.youtube.com">
                   <i class="fab fa-youtube"></i>
                 </a>
               </li>
               <li>
-                <a href="mailto:saarijeffrey@gmail.com">
+                <a class="social-icons" href="mailto:saarijeffrey@gmail.com">
                   <i class="fas fa-envelope"></i>
                 </a>
               </li>
@@ -275,7 +264,7 @@
       },
       opacity: 0,
       duration: 2,
-      x: -600,
+      x: -100,
       ease: 'power2.out',
     });
     gsap.from('.g-my-work-right', {
@@ -285,7 +274,7 @@
       },
       opacity: 0,
       duration: 2,
-      x: 600,
+      x: 100,
       ease: 'power2.out',
     });
     gsap.from('iframe', {
@@ -295,17 +284,17 @@
       },
       opacity: 0,
       duration: 2,
-      x: 600,
+      x: 100,
       ease: 'power2.out',
     });
     gsap.from('.g-buttons', {
       scrollTrigger: {
         trigger: '.g-buttons',
-        start: 'top center+=200',
+        start: 'top center+=250',
       },
       opacity: 0,
-      duration: 2,
-      scale: 0,
+      duration: 1,
+      y: -50,
       ease: 'power2.out',
     });
     gsap.from('.g-my-work', {
@@ -327,7 +316,7 @@
       opacity: 0,
       duration: 1,
       y: 100,
-      ease: 'power4.out',
+      ease: 'power2.out',
     });
     gsap.from('.suggestions', {
       scrollTrigger: {
@@ -336,8 +325,8 @@
       },
       opacity: 0,
       duration: 1,
-      y: 100,
-      ease: 'power4.out',
+      y: 50,
+      ease: 'power2.out',
     });
     gsap.from('.g-YouTube', {
       scrollTrigger: {
@@ -347,7 +336,7 @@
       stagger: 0.3,
       opacity: 0,
       duration: 2,
-      x: -600,
+      x: -100,
       ease: 'power2.out',
     });
     gsap.from('.g-form', {
@@ -355,10 +344,10 @@
         trigger: '.g-form',
         start: 'top center+=250',
       },
-      stagger: 0.3,
+      stagger: 0.2,
       opacity: 0,
-      duration: 1.5,
-      y: 100,
+      duration: 1,
+      y: 50,
       ease: 'power2.out',
     });
     gsap.from('.g-footer', {
@@ -369,7 +358,7 @@
       stagger: 0.3,
       opacity: 0,
       duration: 1,
-      y: -100,
+      y: -50,
       ease: 'power2.out',
     });
   </script>
