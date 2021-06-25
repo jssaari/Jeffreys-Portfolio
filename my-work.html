@@ -121,25 +121,38 @@
           </div>
         </div>
       </section>
-      <section id="contact">
+      <form
+        id="contact"
+        target="_blank"
+        action="https://formsubmit.co/abc28a5fcbb173e72149e53dcf43f052"
+        method="POST"
+      >
         <div class="inner">
           <h3 class="g-form">Interested in Working Together?</h3>
           <p class="subtext g-form">(I read all of the emails I receive)</p>
           <div class="form">
             <div class="name g-form">
               <p>Name</p>
-              <input type="text" class="input-name" />
+              <input type="text" name="name" class="input-name" required />
             </div>
             <div class="email g-form">
               <p>Email</p>
-              <input type="text" class="input-email" />
+              <input type="email" name="email" class="input-email" required />
             </div>
             <div class="message g-form">
               <p>Message</p>
-              <input type="text" class="input-message" />
+              <textarea
+                placeholder="What's on your mind?"
+                class="input-message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
             </div>
           </div>
-          <a class="contact-button empty g-form" href="">Contact</a>
+          <button type="submit" class="contact-button empty g-form" href="">
+            Contact
+          </button>
         </div>
         <div class="suggestions">
           <div class="inner2">
@@ -150,7 +163,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </form>
       <footer>
         <div class="inner">
           <p class="tagline g-footer">

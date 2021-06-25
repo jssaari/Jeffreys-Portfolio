@@ -606,11 +606,11 @@ section.YouTube .right-iframe-container iframe {
   height: 100%;
 }
 
-section#contact {
+form#contact {
   background-color: #142a40;
 }
 
-section#contact .inner {
+form#contact .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -625,7 +625,7 @@ section#contact .inner {
   text-align: center;
 }
 
-section#contact .inner h3 {
+form#contact .inner h3 {
   color: #fff;
   margin: 0;
   padding: 0;
@@ -633,30 +633,30 @@ section#contact .inner h3 {
 }
 
 @media (min-width: 840px) {
-  section#contact .inner h3 {
+  form#contact .inner h3 {
     font-size: 2em;
   }
 }
 
-section#contact .inner p.subtext {
+form#contact .inner p.subtext {
   color: #fff;
   font-size: 0.9em;
 }
 
 @media (min-width: 840px) {
-  section#contact .inner p.subtext {
+  form#contact .inner p.subtext {
     font-size: 1.2em;
   }
 }
 
-section#contact .inner .form {
+form#contact .inner .form {
   color: #3c88d4;
   text-align: left;
   width: 20em;
 }
 
 @media (min-width: 840px) {
-  section#contact .inner .form {
+  form#contact .inner .form {
     width: 40em;
     padding: 1.5em 0 0;
     display: -webkit-box;
@@ -670,81 +670,127 @@ section#contact .inner .form {
   }
 }
 
+form#contact .inner .form .name {
+  min-height: 5.3em;
+}
+
 @media (min-width: 840px) {
-  section#contact .inner .form .name {
+  form#contact .inner .form .name {
     width: 47%;
-    min-height: 4em;
     padding: 0 0 1em;
   }
 }
 
+form#contact .inner .form .email {
+  min-height: 5.3em;
+}
+
 @media (min-width: 840px) {
-  section#contact .inner .form .email {
+  form#contact .inner .form .email {
     width: 47%;
-    min-height: 4em;
     padding: 0 0 1em;
   }
 }
 
-section#contact .inner .form .message {
-  min-height: 6em;
+form#contact .inner .form .message {
+  min-height: 16em;
 }
 
 @media (min-width: 840px) {
-  section#contact .inner .form .message {
+  form#contact .inner .form .message {
     width: 100%;
-    min-height: 12em;
   }
 }
 
-section#contact .inner .form input {
+form#contact .inner .form input,
+form#contact .inner .form textarea {
   background-color: #142a40;
   border: 0.5px solid #3c88d4;
   width: 100%;
   border-radius: 0.2em;
   color: #fff;
+  font: 400 1.3em 'poppins';
+  color: #3c88d4;
 }
 
 @media (min-width: 840px) {
-  section#contact .inner .form input {
+  form#contact .inner .form input,
+  form#contact .inner .form textarea {
     padding: 0.3em 0.3em 0.3em 0.5em;
   }
 }
 
-section#contact .inner .form input.input-message {
+form#contact .inner .form input.input-message,
+form#contact .inner .form textarea.input-message {
   padding: 0.3em 0.3em 6em 0.5em;
 }
 
 @media (min-width: 840px) {
-  section#contact .inner .form input.input-message {
+  form#contact .inner .form input.input-message,
+  form#contact .inner .form textarea.input-message {
     padding: 0.3em 0.3em 10em 0.5em;
   }
 }
 
-section#contact .inner .form input:hover {
+form#contact .inner .form input:hover,
+form#contact .inner .form textarea:hover {
   border: 3px solid #3c88d4;
 }
 
-section#contact .inner .form input:focus-visible {
+form#contact .inner .form input:focus-visible,
+form#contact .inner .form textarea:focus-visible {
   outline: none;
   border: 3px solid #3c88d4;
 }
 
-section#contact .inner .contact-button {
+form#contact .inner .form input {
+  min-height: 2em;
+}
+
+form#contact .inner .form textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 10em;
+  padding: 0.2em 0.5em 0em !important;
+}
+
+form#contact .inner .form ::-webkit-input-placeholder {
+  color: #2c70b4;
+}
+
+form#contact .inner .form :-ms-input-placeholder {
+  color: #2c70b4;
+}
+
+form#contact .inner .form ::-ms-input-placeholder {
+  color: #2c70b4;
+}
+
+form#contact .inner .form ::placeholder {
+  color: #2c70b4;
+}
+
+form#contact .inner .contact-button {
   margin: 1em 0 0;
-  padding: 0.13333em 0.66667em;
+  padding: 0.36em 0.66667em;
   font-size: 1em;
   font-weight: 700;
+  background-color: #142a40;
+  border-color: #3c88d4;
 }
 
 @media (min-width: 840px) {
-  section#contact .inner .contact-button {
+  form#contact .inner .contact-button {
     text-align: center;
     font-size: 1.4em;
   }
 }
 
-section#contact .suggestions {
+form#contact .inner .contact-button:hover {
+  background-color: #3c88d4;
+}
+
+form#contact .suggestions {
   background-color: #3675b4;
   position: relative;
   border-radius: 0.7em;
@@ -755,12 +801,12 @@ section#contact .suggestions {
 }
 
 @media (min-width: 840px) {
-  section#contact .suggestions {
+  form#contact .suggestions {
     max-width: 52em;
   }
 }
 
-section#contact .suggestions .inner2 {
+form#contact .suggestions .inner2 {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -780,7 +826,7 @@ section#contact .suggestions .inner2 {
 }
 
 @media (min-width: 840px) {
-  section#contact .suggestions .inner2 {
+  form#contact .suggestions .inner2 {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -789,25 +835,25 @@ section#contact .suggestions .inner2 {
   }
 }
 
-section#contact .suggestions .inner2 .left {
+form#contact .suggestions .inner2 .left {
   font-weight: 500;
   font-size: 1.4em;
   padding-bottom: 0.2em;
 }
 
 @media (min-width: 840px) {
-  section#contact .suggestions .inner2 .left {
+  form#contact .suggestions .inner2 .left {
     padding-bottom: 0em;
     font-size: 1.5em;
   }
 }
 
-section#contact .suggestions .inner2 .right {
+form#contact .suggestions .inner2 .right {
   font-size: 0.9em;
 }
 
 @media (min-width: 840px) {
-  section#contact .suggestions .inner2 .right {
+  form#contact .suggestions .inner2 .right {
     font-size: 1em;
   }
 }
@@ -1376,5 +1422,11 @@ i {
 
 input:focus-visible {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */
