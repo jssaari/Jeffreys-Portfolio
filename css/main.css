@@ -997,15 +997,6 @@ section.my-work-landing .inner {
         -ms-flex-align: center;
             align-items: center;
   }
-  section.my-work-landing .inner .left .empty.dark {
-    background-color: #3c88d4;
-    color: #142a40;
-    border-color: #142a40;
-  }
-  section.my-work-landing .inner .left .empty.dark:hover {
-    background-color: #142a40;
-    color: white;
-  }
 }
 
 section.my-work-landing .inner .left img {
@@ -1163,6 +1154,9 @@ section.ptools-work-landing ul li i {
 
 section.recent-work {
   text-align: center;
+  max-width: 95em;
+  width: 90%;
+  margin: 0 auto 5em;
 }
 
 section.recent-work h3 {
@@ -1184,12 +1178,54 @@ section.recent-work .cards {
 }
 
 section.recent-work .cards .card {
-  margin: 0 1em 2em;
-  background-color: #142a40;
+  margin: 0em 1.2em 2.4em;
+  min-height: 16em;
+  min-width: 24em;
+}
+
+section.recent-work .cards .card .image {
+  background-image: url(https://campusrevive.org/wp-content/uploads/2021/02/CYPRES-PHOTO.jpg?id=2261);
+  display: block;
+  position: absolute;
+  max-width: 100%;
+  inset: 0;
+  background-size: cover;
   border-radius: 0.8em;
 }
 
-section.recent-work .cards .card ul {
+section.recent-work .cards .card .image:hover {
+  opacity: 0;
+}
+
+section.recent-work .cards .card .card-inner {
+  position: relative;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: inherit;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #142a40;
+  border-radius: 0.8em;
+  padding: 0 1em;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+section.recent-work .cards .card .card-inner:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+section.recent-work .cards .card .card-inner ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1202,15 +1238,39 @@ section.recent-work .cards .card ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 15em;
+  width: 24em;
+  margin: 0 auto 1.4em;
 }
 
-section.recent-work .cards .card ul li {
+section.recent-work .cards .card .card-inner ul li {
   background-color: #3c88d4;
-  padding: 0.1em 0.3em;
+  padding: 0.2em 0.5em;
   border-radius: 0.2em;
   color: white;
   margin: 0.5em 0.3em;
+  font-size: 1.2em;
+}
+
+section.recent-work .cards .card .card-inner .buttons {
+  max-width: 24em;
+}
+
+section.recent-work .cards .card .card-inner .buttons .button {
+  margin: 0 0.2em;
+  font-size: 1.3em;
+}
+
+section.recent-work .cards .card .card-inner .buttons .button.filled {
+  padding: 0.3em 1em;
+}
+
+section.recent-work .cards .card .card-inner .buttons .button.empty {
+  color: white;
+  border-color: #3c88d4;
+}
+
+section#contact .inner {
+  padding-top: 5em;
 }
 
 .filled {

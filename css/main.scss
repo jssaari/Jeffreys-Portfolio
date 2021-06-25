@@ -675,15 +675,6 @@ section.my-work-landing {
         display: flex;
         flex-direction: column;
         align-items: center;
-        .empty.dark {
-          background-color: color(primary);
-          color: color(secondary);
-          border-color: color(secondary);
-          &:hover {
-            background-color: color(secondary);
-            color: white;
-          }
-        }
       }
       img {
         width: 400px;
@@ -785,6 +776,9 @@ section.ptools-work-landing {
 
 section.recent-work {
   text-align: center;
+  max-width: 95em;
+  width: 90%;
+  margin: 0 auto 5em;
   h3 {
     font-size: 2em;
     font-weight: 500;
@@ -796,25 +790,128 @@ section.recent-work {
     justify-content: center;
     flex-wrap: wrap;
     .card {
-      margin: 0 1em 2em;
-      background-color: #142a40;
-      border-radius: 0.8em;
-      ul {
+      margin: 0em 1.2em 2.4em;
+      min-height: 16em;
+      min-width: 24em;
+      .image {
+        background-image: url(https://campusrevive.org/wp-content/uploads/2021/02/CYPRES-PHOTO.jpg?id=2261);
+        display: block;
+        position: absolute;
+        max-width: 100%;
+        inset: 0;
+        background-size: cover;
+        border-radius: 0.8em;
+        &:hover {
+          opacity: 0;
+        }
+      }
+      .card-inner {
+        position: relative;
+        opacity: 0;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 15em;
-        li {
-          background-color: #3c88d4;
-          padding: 0.1em 0.3em;
-          border-radius: 0.2em;
-          color: white;
-          margin: 0.5em 0.3em;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: inherit;
+        backface-visibility: hidden;
+        background-color: #142a40;
+        border-radius: 0.8em;
+        padding: 0 1em;
+        transition: opacity 0.4s;
+        &:hover {
+          opacity: 1;
+          transition: opacity 0.4s;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 24em;
+          margin: 0 auto 1.4em;
+          li {
+            background-color: #3c88d4;
+            padding: 0.2em 0.5em;
+            border-radius: 0.2em;
+            color: white;
+            margin: 0.5em 0.3em;
+            font-size: 1.2em;
+          }
+        }
+        .buttons {
+          max-width: 24em;
+          .button {
+            margin: 0 0.2em;
+            font-size: 1.3em;
+            &.filled {
+              padding: 0.3em $xbutpad;
+            }
+            &.empty {
+              color: white;
+              border-color: color(primary);
+            }
+          }
         }
       }
     }
+    // .card img {
+    //   transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    //   position: absolute;
+    //   inset: 0;
+    //   height: 180.6px;
+    //   z-index: 10;
+    //   width: 307.4px;
+    //   padding: 0em 1.5em;
+    //   border-radius: 0.7em;
+    //   &:hover {
+    //     opacity: 0;
+    //     transition: 0.3s;
+    //     z-index: 0;
+    //   }
+    // }
+    // .card-inner {
+    //   margin: 0 1.5em 2em;
+    //   background-color: #142a40;
+    //   border-radius: 0.8em;
+    //   padding: 1.2em 1em 1.2em;
+    //   position: relative;
+    //   &:hover {
+    //     z-index: 11;
+    //   }
+    //   ul {
+    //     display: flex;
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    //     justify-content: center;
+    //     width: 15em;
+    //     margin: 0 auto 1.4em;
+    //     li {
+    //       background-color: #3c88d4;
+    //       padding: 0.2em 0.5em;
+    //       border-radius: 0.2em;
+    //       color: white;
+    //       margin: 0.5em 0.3em;
+    //     }
+    //   }
+    //   .buttons {
+    //     max-width: 18em;
+    //     .button {
+    //       margin: 0 0.2em;
+    //       font-size: 1em;
+    //       &.filled {
+    //         padding: 0.3em $xbutpad;
+    //       }
+    //       &.empty {
+    //         color: white;
+    //         border-color: color(primary);
+    //       }
+    //     }
+    //   }
+    // }
   }
+}
+
+section#contact .inner {
+  padding-top: 5em;
 }
 
 //MY WORK LANDING PAGE END

@@ -24,9 +24,7 @@
           <li><a href="https://www.youtube.com">YouTube</a></li>
         </ul>
       </div>
-      <div class="button-container">
-        <a class="nav-button empty" href="#contact">Contact</a>
-      </div>
+      <a class="nav-button empty" href="#contact">Contact</a>
     </header>
     <main>
       <section class="my-work-landing">
@@ -73,46 +71,52 @@
       <section class="recent-work">
         <h3>Recent Work</h3>
         <div class="cards">
-          <div class="card">
-            <img src="#" alt="" />
-            <ul>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>PHP</li>
-              <li>WordPress</li>
-            </ul>
-            <div class="buttons">
-              <button class="filled"></button>
-              <button class="empty"></button>
+          <div class="card g-card">
+            <div class="image"></div>
+            <div class="card-inner">
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>WordPress</li>
+              </ul>
+              <div class="buttons">
+                <a href="#" class="button empty">Visit Site</a>
+                <a href="#" class="button filled">What I learned</a>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <img src="#" alt="" />
-            <ul>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>PHP</li>
-              <li>WordPress</li>
-            </ul>
-            <div class="buttons">
-              <button class="filled"></button>
-              <button class="empty"></button>
+          <div class="card g-card">
+            <div class="image"></div>
+            <div class="card-inner">
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>WordPress</li>
+              </ul>
+              <div class="buttons">
+                <a href="#" class="button empty">Visit Site</a>
+                <a href="#" class="button filled">What I learned</a>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <img src="#" alt="" />
-            <ul>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>PHP</li>
-              <li>WordPress</li>
-            </ul>
-            <div class="buttons">
-              <button class="filled"></button>
-              <button class="empty"></button>
+          <div class="card g-card">
+            <div class="image"></div>
+            <div class="card-inner">
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>WordPress</li>
+              </ul>
+              <div class="buttons">
+                <a href="#" class="button empty">Visit Site</a>
+                <a href="#" class="button filled">What I learned</a>
+              </div>
             </div>
           </div>
         </div>
@@ -236,6 +240,17 @@
       y: 50,
       ease: 'power2.out',
     });
+    gsap.from('.g-card', {
+      scrollTrigger: {
+        trigger: '.g-card',
+        start: 'top center+=100',
+      },
+      stagger: 0.3,
+      opacity: 0,
+      duration: 1,
+      y: 50,
+      ease: 'power2.out',
+    });
     gsap.from('.g-form', {
       scrollTrigger: {
         trigger: '.g-form',
@@ -243,14 +258,14 @@
       },
       stagger: 0.2,
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
       y: 50,
       ease: 'power2.out',
     });
     gsap.from('.suggestions', {
       scrollTrigger: {
         trigger: '.suggestions',
-        start: 'top center+=250',
+        start: 'top center+=300',
       },
       opacity: 0,
       duration: 1,
