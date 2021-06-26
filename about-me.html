@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeffrey Saari</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2e79be8357.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="index.html">Jeffrey Saari</a></div>
+      <div class="nav">
+        <ul>
+          <li><a href="/about-me.html">About Me</a></li>
+          <li><a href="/my-work.html">My Work</a></li>
+          <li><a href="https://www.youtube.com">YouTube</a></li>
+        </ul>
+      </div>
+      <a class="nav-button empty" href="#contact">Contact</a>
+    </header>
+  </body>
+  <main>
+    <section class="about">
+      <div class="inner">
+        <h2 class="g-about">Hi, I'm Jeffrey.</h2>
+        <p class="g-about">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy
+        </p>
+        <a class="about-button filled g-about" href="/about-me.html"
+          >About Me</a
+        >
+      </div>
+    </section>
+  </main>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline();
+    gsap.from('.g-about', {
+      scrollTrigger: {
+        trigger: '.g-about',
+        start: 'top center+=200',
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.4,
+    });
+    //   gsap.from('.g-hero', {
+    //     scrollTrigger: {
+    //       trigger: '.g-hero',
+    //       start: 'top bottom',
+    //     },
+    //     y: 50,
+    //     opacity: 0,
+    //     duration: 0.7,
+    //     stagger: 0.4,
+    //   });
+    //   gsap.from('.g-card', {
+    //     scrollTrigger: {
+    //       trigger: '.g-card',
+    //       start: 'top center',
+    //     },
+    //     y: 100,
+    //     opacity: 0,
+    //     duration: 0.7,
+    //     stagger: 0.4,
+    //   });
+    //   gsap.from('.gsap-my-work-img', {
+    //     scrollTrigger: {
+    //       trigger: '.gsap-my-work-img',
+    //       start: 'top center+=100',
+    //     },
+    //     opacity: 0,
+    //     duration: 2,
+    //     x: -100,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('.g-my-work-right', {
+    //     scrollTrigger: {
+    //       trigger: '.g-my-work-right',
+    //       start: 'top center+=100',
+    //     },
+    //     opacity: 0,
+    //     duration: 2,
+    //     x: 100,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('iframe', {
+    //     scrollTrigger: {
+    //       trigger: 'iframe',
+    //       start: 'top center',
+    //     },
+    //     opacity: 0,
+    //     duration: 2,
+    //     x: 100,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('.g-buttons', {
+    //     scrollTrigger: {
+    //       trigger: '.g-buttons',
+    //       start: 'top center+=250',
+    //     },
+    //     opacity: 0,
+    //     duration: 1,
+    //     y: -50,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('.g-my-work', {
+    //     scrollTrigger: {
+    //       trigger: '.g-my-work',
+    //       start: 'top center+=100',
+    //     },
+    //     stagger: 0.3,
+    //     opacity: 0,
+    //     duration: 1,
+    //     y: -50,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('.g-tools', {
+    //     scrollTrigger: {
+    //       trigger: '.g-tools',
+    //       start: 'top center+=250',
+    //     },
+    //     opacity: 0,
+    //     duration: 1,
+    //     y: 100,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('.suggestions', {
+    //     scrollTrigger: {
+    //       trigger: '.suggestions',
+    //       start: 'top center+=250',
+    //     },
+    //     opacity: 0,
+    //     duration: 1,
+    //     y: 50,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('.g-YouTube', {
+    //     scrollTrigger: {
+    //       trigger: '.g-YouTube',
+    //       start: 'top center+=250',
+    //     },
+    //     stagger: 0.3,
+    //     opacity: 0,
+    //     duration: 2,
+    //     x: -100,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('.g-form', {
+    //     scrollTrigger: {
+    //       trigger: '.g-form',
+    //       start: 'top center+=250',
+    //     },
+    //     stagger: 0.2,
+    //     opacity: 0,
+    //     duration: 0.5,
+    //     y: 50,
+    //     ease: 'power2.out',
+    //   });
+    //   gsap.from('.g-footer', {
+    //     scrollTrigger: {
+    //       trigger: '.suggestions',
+    //       start: 'top bottom',
+    //     },
+    //     stagger: 0.3,
+    //     opacity: 0,
+    //     duration: 1,
+    //     y: -50,
+    //     ease: 'power2.out',
+    //   });
+  </script>
+</html>
