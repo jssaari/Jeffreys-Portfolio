@@ -68,7 +68,7 @@
         </ul>
       </section>
       <section class="recent-work">
-        <h3>Recent Work</h3>
+        <h3 class="g-card">Recent Work</h3>
         <div class="cards">
           <div class="card g-card">
             <div class="image"></div>
@@ -200,101 +200,4 @@
     </main>
   </body>
   <script src="js/script.js"></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from('.gsap-my-work-img', {
-      scrollTrigger: {
-        trigger: '.gsap-my-work-img',
-        start: 'top center+=100',
-      },
-      opacity: 0,
-      duration: 2,
-      x: -100,
-      ease: 'power2.out',
-    });
-    gsap.from('.g-my-work-right', {
-      scrollTrigger: {
-        trigger: '.g-my-work-right',
-        start: 'top center+=100',
-      },
-      opacity: 0,
-      duration: 2,
-      x: 100,
-      ease: 'power2.out',
-    });
-    gsap.from('.g-buttons', {
-      scrollTrigger: {
-        trigger: '.g-buttons',
-        start: 'top center+=200',
-      },
-      opacity: 0,
-      duration: 1,
-      y: -50,
-      ease: 'power2.out',
-    });
-    gsap.from('.g-my-work', {
-      scrollTrigger: {
-        trigger: '.g-my-work',
-        start: 'top center+=100',
-      },
-      stagger: 0.3,
-      opacity: 0,
-      duration: 1,
-      y: -50,
-      ease: 'power2.out',
-    });
-    gsap.from('.g-tools', {
-      scrollTrigger: {
-        trigger: '.g-tools',
-        start: 'top center+=250',
-      },
-      opacity: 0,
-      duration: 1,
-      y: 50,
-      ease: 'power2.out',
-    });
-    gsap.from('.g-card', {
-      scrollTrigger: {
-        trigger: '.g-card',
-        start: 'top center+=100',
-      },
-      stagger: 0.3,
-      opacity: 0,
-      duration: 1,
-      y: 50,
-      ease: 'power2.out',
-    });
-    gsap.from('.g-form', {
-      scrollTrigger: {
-        trigger: '.g-form',
-        start: 'top center+=250',
-      },
-      stagger: 0.2,
-      opacity: 0,
-      duration: 0.5,
-      y: 50,
-      ease: 'power2.out',
-    });
-    gsap.from('.suggestions', {
-      scrollTrigger: {
-        trigger: '.suggestions',
-        start: 'top center+=300',
-      },
-      opacity: 0,
-      duration: 1,
-      y: 50,
-      ease: 'power2.out',
-    });
-    gsap.from('.g-footer', {
-      scrollTrigger: {
-        trigger: '.suggestions',
-        start: 'top bottom',
-      },
-      stagger: 0.3,
-      opacity: 0,
-      duration: 1,
-      y: -50,
-      ease: 'power2.out',
-    });
-  </script>
 </html>
