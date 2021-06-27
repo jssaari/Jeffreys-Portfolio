@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeffrey Saari</title>
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/2e79be8357.js"
       crossorigin="anonymous"
@@ -19,8 +18,8 @@
       <div class="logo"><a href="index.html">Jeffrey Saari</a></div>
       <div class="nav">
         <ul>
-          <li><a href="/about-me.html">About Me</a></li>
-          <li><a href="/my-work.html">My Work</a></li>
+          <li><a id="about-nav" href="/about-me.html">About Me</a></li>
+          <li><a id="work-nav" href="/my-work.html">My Work</a></li>
           <li><a href="https://www.youtube.com">YouTube</a></li>
         </ul>
       </div>
@@ -45,6 +44,7 @@
       </div>
     </section>
   </main>
+  <script src="js/script.js"></script>
   <script>
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline();
