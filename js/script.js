@@ -6,10 +6,10 @@ const work = '/my-work.html';
 var workEl = document.getElementById('work-nav');
 
 about === curLocation
-  ? (aboutEl.style.opacity = 1) && (aboutEl.style.fontWeight = 700)
+  ? (aboutEl.style.opacity = 1) && (aboutEl.style.fontWeight = 600)
   : console.log();
 work === curLocation
-  ? (workEl.style.opacity = 1) && (workEl.style.fontWeight = 700)
+  ? (workEl.style.opacity = 1) && (workEl.style.fontWeight = 600)
   : console.log();
 
 gsap.registerPlugin(ScrollTrigger);
