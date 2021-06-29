@@ -24,10 +24,21 @@ body {
   overflow-y: scroll;
 }
 
+::-moz-selection {
+  background: #2c70b4;
+}
+
+::selection {
+  background: #2c70b4;
+}
+
+::-moz-selection {
+  background: #2c70b4;
+}
+
 header {
   background-color: #fff;
   position: fixed;
-  right: 0;
   left: 0;
   top: 0;
   z-index: 2;
