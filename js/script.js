@@ -1,16 +1,47 @@
 'use strict';
+
 const curLocation = window.location.pathname;
 const about = '/about-me.html';
-var aboutEl = document.getElementById('about-nav');
+const aboutEl = document.getElementById('about-nav');
 const work = '/my-work.html';
-var workEl = document.getElementById('work-nav');
+const workEl = document.getElementById('work-nav');
 
+const body = document.body;
+const scrollUp = "scroll-up";
+const scrollDown = "scroll-down";
+let lastScroll = 0;
+//ADD STYLE TO NAV ITEM IF NAV ITEM IS CURRENT PAGE
 about === curLocation
   ? (aboutEl.style.opacity = 1) && (aboutEl.style.fontWeight = 600)
   : console.log();
 work === curLocation
   ? (workEl.style.opacity = 1) && (workEl.style.fontWeight = 600)
   : console.log();
+
+//HEADER SCROLL ANIMATION
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    body.classList.remove(scrollUp);
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    // down
+    body.classList.remove(scrollUp);
+    body.classList.add(scrollDown);
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains(scrollDown)
+  ) {
+    // up
+    body.classList.remove(scrollDown);
+    body.classList.add(scrollUp);
+  }
+  lastScroll = currentScroll;
+});
+
+//GSAP ANIMATIONS
 
 gsap.registerPlugin(ScrollTrigger);
 var tl = gsap.timeline();
