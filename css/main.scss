@@ -69,6 +69,7 @@ header {
   position:fixed;
   left:0;
   top:0;
+  right:0;
   z-index:2;
   padding: 1em 0;
   display: flex;
@@ -167,6 +168,9 @@ section.hero {
 
 section.about {
   background-color: color(primary);
+  &.about-landing {
+    padding-top: 3em;
+  }
   .inner {
     text-align: center;
     display: flex;
