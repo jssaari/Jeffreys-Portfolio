@@ -42,7 +42,6 @@ $youtube: 1240px;
   transform: none;
 }
 
-
 body,
 html {
   height: 100vh;
@@ -66,17 +65,18 @@ body {
 
 header {
   background-color: #fff;
-  position:fixed;
-  left:0;
-  top:0;
-  right:0;
-  z-index:2;
-  padding: 1em 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0.5em 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  transition:transform 0.4s;
+  transition: transform 0.4s;
   @include desktop {
+    padding: 1em 0;
     width: 100%;
     margin: auto;
   }
@@ -120,6 +120,7 @@ section.hero {
   align-items: center;
   text-align: center;
   margin: 4em auto;
+  padding: 3em 0 0;
   @include desktop {
     width: 41.5em;
     margin: 12em auto;
@@ -147,9 +148,9 @@ section.hero {
     }
   }
   .hero-button {
+    padding: 0.4em 1.2em;
+    margin: 1em 0 0;
     @include desktop {
-      margin: 1em 0 0;
-      padding: 0.4em 1.2em;
     }
   }
 }
@@ -169,7 +170,10 @@ section.hero {
 section.about {
   background-color: color(primary);
   &.about-landing {
-    padding-top: 3em;
+    padding-top: 5em;
+    @include desktop {
+      padding-top: 4em;
+    }
   }
   .inner {
     text-align: center;
@@ -196,9 +200,12 @@ section.about {
       }
     }
     .about-button {
-      margin: 1.5em 0 0;
+      margin: 1.5em 0;
       background-color: color(secondary);
       padding: 0.3em 1em;
+      .about-button-subtext {
+        font-size: 0.65em;
+      }
       &:hover {
         background-color: color(secondary-hover);
       }
@@ -330,15 +337,17 @@ section.my-work {
       align-items: center;
       flex-direction: column;
       margin: 0 auto -5em;
-      width: 35%;
+      width: 60%;
       @include desktop {
+        width: 35%;
         margin: 0 auto;
       }
       ul {
         font-weight: 500;
-        line-height: 2em;
         margin: 3em 0 1em;
+        line-height: 1.5em;
         @include desktop {
+          line-height: 2em;
           margin: 0 0 10em;
         }
       }
@@ -750,16 +759,18 @@ section.my-work-landing {
       align-items: center;
       flex-direction: column;
       margin: 0 auto -5em;
-      width: 35%;
+      width: 60%;
       @include desktop {
+        width: 35%;
         margin: 0 auto;
       }
       ul {
         color: white;
         font-weight: 400;
-        line-height: 1.7em;
+        line-height: 1.5em;
         margin: 3em 0 1em;
         @include desktop {
+          line-height: 1.7em;
           font-weight: 500;
           margin: 0 0 10em;
         }

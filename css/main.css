@@ -43,7 +43,7 @@ header {
   top: 0;
   right: 0;
   z-index: 2;
-  padding: 1em 0;
+  padding: 0.5em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +61,7 @@ header {
 
 @media (min-width: 840px) {
   header {
+    padding: 1em 0;
     width: 100%;
     margin: auto;
   }
@@ -118,6 +119,7 @@ section.hero {
           align-items: center;
   text-align: center;
   margin: 4em auto;
+  padding: 3em 0 0;
 }
 
 @media (min-width: 840px) {
@@ -157,11 +159,9 @@ section.hero p {
   }
 }
 
-@media (min-width: 840px) {
-  section.hero .hero-button {
-    margin: 1em 0 0;
-    padding: 0.4em 1.2em;
-  }
+section.hero .hero-button {
+  padding: 0.4em 1.2em;
+  margin: 1em 0 0;
 }
 
 .ellipse {
@@ -185,7 +185,13 @@ section.about {
 }
 
 section.about.about-landing {
-  padding-top: 3em;
+  padding-top: 5em;
+}
+
+@media (min-width: 840px) {
+  section.about.about-landing {
+    padding-top: 4em;
+  }
 }
 
 section.about .inner {
@@ -230,9 +236,13 @@ section.about .inner p {
 }
 
 section.about .inner .about-button {
-  margin: 1.5em 0 0;
+  margin: 1.5em 0;
   background-color: #142a40;
   padding: 0.3em 1em;
+}
+
+section.about .inner .about-button .about-button-subtext {
+  font-size: 0.65em;
 }
 
 section.about .inner .about-button:hover {
@@ -454,23 +464,25 @@ section.my-work .inner .right {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto -5em;
-  width: 35%;
+  width: 60%;
 }
 
 @media (min-width: 840px) {
   section.my-work .inner .right {
+    width: 35%;
     margin: 0 auto;
   }
 }
 
 section.my-work .inner .right ul {
   font-weight: 500;
-  line-height: 2em;
   margin: 3em 0 1em;
+  line-height: 1.5em;
 }
 
 @media (min-width: 840px) {
   section.my-work .inner .right ul {
+    line-height: 2em;
     margin: 0 0 10em;
   }
 }
@@ -1135,11 +1147,12 @@ section.my-work-landing .inner .right {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto -5em;
-  width: 35%;
+  width: 60%;
 }
 
 @media (min-width: 840px) {
   section.my-work-landing .inner .right {
+    width: 35%;
     margin: 0 auto;
   }
 }
@@ -1147,12 +1160,13 @@ section.my-work-landing .inner .right {
 section.my-work-landing .inner .right ul {
   color: white;
   font-weight: 400;
-  line-height: 1.7em;
+  line-height: 1.5em;
   margin: 3em 0 1em;
 }
 
 @media (min-width: 840px) {
   section.my-work-landing .inner .right ul {
+    line-height: 1.7em;
     font-weight: 500;
     margin: 0 0 10em;
   }
