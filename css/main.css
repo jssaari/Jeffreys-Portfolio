@@ -187,6 +187,12 @@ header .mobile-menu i:hover {
   display: flex !important;
 }
 
+@media (min-width: 840px) {
+  .reveal-ham {
+    display: none !important;
+  }
+}
+
 section.hero {
   display: -webkit-box;
   display: -ms-flexbox;
