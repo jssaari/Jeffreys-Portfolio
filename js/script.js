@@ -6,9 +6,12 @@ const aboutEl = document.getElementById('about-nav');
 const work = '/my-work.html';
 const workEl = document.getElementById('work-nav');
 
+const hamburger = document.getElementById('hamburger-icon');
+const hamburgerMenu = document.getElementById('hamburger');
+
 const body = document.body;
-const scrollUp = "scroll-up";
-const scrollDown = "scroll-down";
+const scrollUp = 'scroll-up';
+const scrollDown = 'scroll-down';
 let lastScroll = 0;
 //ADD STYLE TO NAV ITEM IF NAV ITEM IS CURRENT PAGE
 about === curLocation
@@ -18,8 +21,20 @@ work === curLocation
   ? (workEl.style.opacity = 1) && (workEl.style.fontWeight = 600)
   : console.log();
 
+//REVEAL HAMBURGER MENU ON CLICK
+hamburger.onclick = function revealHamburger() {
+  !hamburgerMenu.classList.contains('reveal-ham')
+    ? hamburgerMenu.classList.add('reveal-ham')
+    : hamburgerMenu.classList.remove('reveal-ham');
+  // if ((hamburgerMenu.style.cssText = 'display:none;')) {
+  //   hamburgerMenu.style.cssText = 'display:block;';
+  // } else if ((hamburgerMenu.style.cssText = 'display:block;')) {
+  //   hamburgerMenu.style.cssText = 'display:none;';
+  // }
+};
+
 //HEADER SCROLL ANIMATION
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
   if (currentScroll <= 0) {
     body.classList.remove(scrollUp);

@@ -48,9 +48,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -62,6 +61,9 @@ header {
 
 @media (min-width: 840px) {
   header {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding: 1em 0;
     width: 100%;
     margin: auto;
@@ -70,6 +72,16 @@ header {
 
 header .logo {
   font-weight: 700;
+}
+
+header .nav {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  header .nav {
+    display: block;
+  }
 }
 
 @media (min-width: 840px) {
@@ -102,8 +114,77 @@ header .nav ul li a:hover {
 }
 
 header .nav-button {
-  margin: 0.5em 0;
-  font-weight: 700;
+  display: none;
+}
+
+@media (min-width: 840px) {
+  header .nav-button {
+    display: block;
+    margin: 0.5em 0;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 840px) {
+  header .mobile-menu {
+    display: none;
+  }
+}
+
+header .mobile-menu i {
+  font-size: 3.5em;
+  color: #3c88d4;
+}
+
+header .mobile-menu i:hover {
+  cursor: pointer;
+}
+
+#hamburger {
+  display: none;
+  inset: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: #202020f0;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding: 5em 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 840px) {
+  #hamburger {
+    display: none;
+  }
+}
+
+#hamburger ul li {
+  opacity: 1 !important;
+  font-size: 2em;
+  color: #3c88d4;
+  font-weight: 500;
+}
+
+#hamburger .mobile-nav-button {
+  margin-top: 1em;
+  font-size: 1.5em;
+}
+
+.reveal-ham {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 section.hero {
