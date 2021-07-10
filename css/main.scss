@@ -141,6 +141,7 @@ header {
   z-index: 1;
   background-color: #202020f0;
   width: 100%;
+  backdrop-filter: blur(4px);
   text-align: center;
   transition: 0.4s;
   // display: flex;
@@ -151,12 +152,15 @@ header {
   @include desktop {
     display: none;
   }
-  ul {
-    li {
-      opacity: 1 !important;
-      font-size: 2em;
-      color: color(primary);
-      font-weight: 500;
+  .mobile-nav-menu {
+    margin: -6em 0 0;
+    ul {
+      li {
+        opacity: 1 !important;
+        font-size: 2em;
+        color: color(primary);
+        font-weight: 500;
+      }
     }
   }
   .mobile-nav-button {

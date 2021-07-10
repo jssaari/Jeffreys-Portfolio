@@ -147,6 +147,8 @@ header .mobile-menu i:hover {
   z-index: 1;
   background-color: #202020f0;
   width: 100%;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   text-align: center;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -169,7 +171,11 @@ header .mobile-menu i:hover {
   }
 }
 
-#hamburger ul li {
+#hamburger .mobile-nav-menu {
+  margin: -6em 0 0;
+}
+
+#hamburger .mobile-nav-menu ul li {
   opacity: 1 !important;
   font-size: 2em;
   color: #3c88d4;
