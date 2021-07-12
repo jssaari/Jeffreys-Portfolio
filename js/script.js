@@ -3,11 +3,19 @@
 const curLocation = window.location.pathname;
 const about = '/about-me.html';
 const aboutEl = document.getElementById('about-nav');
+const aboutElMob = document.getElementById('about-nav-mobile');
 const work = '/my-work.html';
 const workEl = document.getElementById('work-nav');
+const workElMob = document.getElementById('work-nav-mobile');
 
 const hamburger = document.getElementById('hamburger-icon');
 const hamburgerMenu = document.getElementById('hamburger');
+
+const learned = document.getElementById('learned');
+const learnedButton = document.getElementById('learned-button');
+const languages = document.getElementById('languages');
+const languagesButton = document.getElementById('languages-button');
+const closeIcon = document.getElementById('close');
 
 const body = document.body;
 const scrollUp = 'scroll-up';
@@ -15,10 +23,14 @@ const scrollDown = 'scroll-down';
 let lastScroll = 0;
 //ADD STYLE TO NAV ITEM IF NAV ITEM IS CURRENT PAGE
 about === curLocation
-  ? (aboutEl.style.opacity = 1) && (aboutEl.style.fontWeight = 600)
+  ? (aboutEl.style.opacity = 1) &&
+    (aboutEl.style.fontWeight = 600) &&
+    (aboutElMob.style.fontWeight = 600)
   : console.log();
 work === curLocation
-  ? (workEl.style.opacity = 1) && (workEl.style.fontWeight = 600)
+  ? (workEl.style.opacity = 1) &&
+    (workEl.style.fontWeight = 600) &&
+    (workElMob.style.fontWeight = 600)
   : console.log();
 
 //REVEAL HAMBURGER MENU ON CLICK
@@ -31,6 +43,22 @@ hamburger.onclick = function revealHamburger() {
   // } else if ((hamburgerMenu.style.cssText = 'display:block;')) {
   //   hamburgerMenu.style.cssText = 'display:none;';
   // }
+};
+
+//REVEAL WHAT I LEARNED ON CLICK
+learnedButton.onclick = function revealLearned() {
+  learned.style.display = 'flex';
+  languages.style.display = 'none';
+};
+
+languagesButton.onclick = function revealLearned() {
+  languages.style.display = 'flex';
+  learned.style.display = 'none';
+};
+
+closeIcon.onclick = function revealLearned() {
+  languages.style.display = 'flex';
+  learned.style.display = 'none';
 };
 
 //HEADER SCROLL ANIMATION

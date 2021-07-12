@@ -179,7 +179,7 @@ header .mobile-menu i:hover {
   opacity: 1 !important;
   font-size: 2em;
   color: #3c88d4;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 #hamburger .mobile-nav-button {
@@ -1456,6 +1456,82 @@ section.recent-work .cards .card .card-inner .buttons .button.filled {
 }
 
 section.recent-work .cards .card .card-inner .buttons .button.empty {
+  color: white;
+  border-color: #3c88d4;
+}
+
+section.recent-work .cards .card .card-inner-learned {
+  position: relative;
+  display: none;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: inherit;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #142a40;
+  border-radius: 0.8em;
+  padding: 0 1em;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+section.recent-work .cards .card .card-inner-learned:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+section.recent-work .cards .card .card-inner-learned #close {
+  font-size: 2em;
+  color: #3c88d4;
+  width: 1em;
+  cursor: pointer;
+}
+
+section.recent-work .cards .card .card-inner-learned ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24em;
+  margin: 0 auto 1.4em;
+  max-height: 7.1em;
+}
+
+section.recent-work .cards .card .card-inner-learned ul li {
+  color: white;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+}
+
+section.recent-work .cards .card .card-inner-learned .buttons {
+  max-width: 24em;
+  margin-bottom: 1em;
+}
+
+section.recent-work .cards .card .card-inner-learned .buttons .button {
+  margin: 0 0.2em;
+  font-size: 1.3em;
+}
+
+section.recent-work .cards .card .card-inner-learned .buttons .button.filled {
+  padding: 0.3em 1em;
+}
+
+section.recent-work .cards .card .card-inner-learned .buttons .button.empty {
   color: white;
   border-color: #3c88d4;
 }
