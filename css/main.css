@@ -1493,6 +1493,13 @@ section.recent-work .cards .card .card-inner-learned #close {
   cursor: pointer;
 }
 
+section.recent-work .cards .card .card-inner-learned #close-2 {
+  font-size: 2em;
+  color: #3c88d4;
+  width: 1em;
+  cursor: pointer;
+}
+
 section.recent-work .cards .card .card-inner-learned ul {
   display: -webkit-box;
   display: -ms-flexbox;

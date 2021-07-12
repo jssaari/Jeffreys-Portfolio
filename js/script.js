@@ -16,6 +16,11 @@ const learnedButton = document.getElementById('learned-button');
 const languages = document.getElementById('languages');
 const languagesButton = document.getElementById('languages-button');
 const closeIcon = document.getElementById('close');
+const learned2 = document.getElementById('learned-2');
+const learnedButton2 = document.getElementById('learned-button-2');
+const languages2 = document.getElementById('languages-2');
+const languagesButton2 = document.getElementById('languages-button-2');
+const closeIcon2 = document.getElementById('close-2');
 
 const body = document.body;
 const scrollUp = 'scroll-up';
@@ -59,6 +64,21 @@ languagesButton.onclick = function revealLearned() {
 closeIcon.onclick = function revealLearned() {
   languages.style.display = 'flex';
   learned.style.display = 'none';
+};
+
+learnedButton2.onclick = function revealLearned() {
+  learned2.style.display = 'flex';
+  languages2.style.display = 'none';
+};
+
+languagesButton2.onclick = function revealLearned() {
+  languages2.style.display = 'flex';
+  learned2.style.display = 'none';
+};
+
+closeIcon2.onclick = function revealLearned() {
+  languages2.style.display = 'flex';
+  learned2.style.display = 'none';
 };
 
 //HEADER SCROLL ANIMATION
