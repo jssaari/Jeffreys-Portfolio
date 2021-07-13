@@ -329,6 +329,14 @@ section.about .inner p {
   }
 }
 
+section.about .inner p #plain-joe {
+  text-decoration: underline;
+}
+
+section.about .inner p #plain-joe:hover {
+  color: #f37022;
+}
+
 section.about .inner .about-button {
   margin: 1.5em 0;
   background-color: #142a40;
@@ -1110,6 +1118,279 @@ footer .credits a:hover {
   color: white;
 }
 
+section.about-education {
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 840px) {
+  section.about-education {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 23em;
+  }
+}
+
+section.about-education .left {
+  text-align: center;
+  margin: 2em auto 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22em;
+}
+
+@media (min-width: 840px) {
+  section.about-education .left {
+    width: 35em;
+    margin: 2em 2em 2em 5em;
+  }
+}
+
+section.about-education .left h3 {
+  color: #3c88d4;
+  margin: 0;
+  font-size: 2em;
+}
+
+@media (min-width: 840px) {
+  section.about-education .left h3 {
+    font-size: 2.5em;
+    width: 10em;
+  }
+}
+
+section.about-education .left p {
+  color: #142a40;
+  font-weight: 400;
+  font-size: 1.1em;
+  letter-spacing: 0em;
+}
+
+section.about-education .right {
+  margin: 0em auto -2em;
+  position: relative;
+  width: 25em;
+  height: 11.7em;
+}
+
+@media (min-width: 840px) {
+  section.about-education .right {
+    width: 42.5em;
+    margin: 0;
+  }
+}
+
+section.about-courses {
+  background-color: #3c88d4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 840px) {
+  section.about-courses {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 23em;
+  }
+}
+
+section.about-courses .left {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 0em auto -2em;
+  position: relative;
+  width: 25em;
+  height: 11.7em;
+}
+
+@media (min-width: 840px) {
+  section.about-courses .left {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 42.5em;
+    margin: 0;
+  }
+}
+
+section.about-courses .right {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  text-align: center;
+  margin: 5em auto 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22em;
+}
+
+@media (min-width: 840px) {
+  section.about-courses .right {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 35em;
+    margin: 7em 2em 2em 5em;
+  }
+}
+
+section.about-courses .right h3 {
+  color: #142a40;
+  margin: 0;
+  font-size: 2em;
+}
+
+@media (min-width: 840px) {
+  section.about-courses .right h3 {
+    font-size: 2.5em;
+    width: 10em;
+  }
+}
+
+section.about-courses .right p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.1em;
+  letter-spacing: 0em;
+}
+
+section.about-something {
+  background-color: #142a40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 840px) {
+  section.about-something {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 23em;
+  }
+}
+
+section.about-something .left {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  text-align: center;
+  margin: 5em auto 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22em;
+}
+
+@media (min-width: 840px) {
+  section.about-something .left {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 35em;
+    margin: 7em 2em 2em 5em;
+  }
+}
+
+section.about-something .left h3 {
+  color: #3c88d4;
+  margin: 0;
+  font-size: 2em;
+}
+
+@media (min-width: 840px) {
+  section.about-something .left h3 {
+    font-size: 2.5em;
+    width: 10em;
+  }
+}
+
+section.about-something .left p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.1em;
+  letter-spacing: 0em;
+}
+
+section.about-something .right {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 0em auto -2em;
+  position: relative;
+  width: 25em;
+  height: 11.7em;
+}
+
+@media (min-width: 840px) {
+  section.about-something .right {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 42.5em;
+    margin: 0;
+  }
+}
+
 section.my-work-landing {
   background-color: #3c88d4;
   text-align: center;
@@ -1486,14 +1767,9 @@ section.recent-work .cards .card .card-inner-learned:hover {
   transition: opacity 0.4s;
 }
 
-section.recent-work .cards .card .card-inner-learned #close {
-  font-size: 2em;
-  color: #3c88d4;
-  width: 1em;
-  cursor: pointer;
-}
-
-section.recent-work .cards .card .card-inner-learned #close-2 {
+section.recent-work .cards .card .card-inner-learned #close,
+section.recent-work .cards .card .card-inner-learned #close-2,
+section.recent-work .cards .card .card-inner-learned #close-3 {
   font-size: 2em;
   color: #3c88d4;
   width: 1em;

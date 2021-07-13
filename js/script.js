@@ -21,6 +21,11 @@ const learnedButton2 = document.getElementById('learned-button-2');
 const languages2 = document.getElementById('languages-2');
 const languagesButton2 = document.getElementById('languages-button-2');
 const closeIcon2 = document.getElementById('close-2');
+const learned3 = document.getElementById('learned-3');
+const learnedButton3 = document.getElementById('learned-button-3');
+const languages3 = document.getElementById('languages-3');
+const languagesButton3 = document.getElementById('languages-button-3');
+const closeIcon3 = document.getElementById('close-3');
 
 const body = document.body;
 const scrollUp = 'scroll-up';
@@ -51,35 +56,53 @@ hamburger.onclick = function revealHamburger() {
 };
 
 //REVEAL WHAT I LEARNED ON CLICK
-learnedButton.onclick = function revealLearned() {
-  learned.style.display = 'flex';
-  languages.style.display = 'none';
-};
+if (work === curLocation) {
+  learnedButton.onclick = function revealLearned() {
+    learned.style.display = 'flex';
+    languages.style.display = 'none';
+  };
 
-languagesButton.onclick = function revealLearned() {
-  languages.style.display = 'flex';
-  learned.style.display = 'none';
-};
+  languagesButton.onclick = function revealLearned() {
+    languages.style.display = 'flex';
+    learned.style.display = 'none';
+  };
 
-closeIcon.onclick = function revealLearned() {
-  languages.style.display = 'flex';
-  learned.style.display = 'none';
-};
+  closeIcon.onclick = function revealLearned() {
+    languages.style.display = 'flex';
+    learned.style.display = 'none';
+  };
 
-learnedButton2.onclick = function revealLearned() {
-  learned2.style.display = 'flex';
-  languages2.style.display = 'none';
-};
+  learnedButton2.onclick = function revealLearned() {
+    learned2.style.display = 'flex';
+    languages2.style.display = 'none';
+  };
 
-languagesButton2.onclick = function revealLearned() {
-  languages2.style.display = 'flex';
-  learned2.style.display = 'none';
-};
+  languagesButton2.onclick = function revealLearned() {
+    languages2.style.display = 'flex';
+    learned2.style.display = 'none';
+  };
 
-closeIcon2.onclick = function revealLearned() {
-  languages2.style.display = 'flex';
-  learned2.style.display = 'none';
-};
+  closeIcon2.onclick = function revealLearned() {
+    languages2.style.display = 'flex';
+    learned2.style.display = 'none';
+  };
+
+  learnedButton3.onclick = function revealLearned() {
+    learned3.style.display = 'flex';
+    languages3.style.display = 'none';
+  };
+
+  languagesButton3.onclick = function revealLearned() {
+    languages3.style.display = 'flex';
+    learned3.style.display = 'none';
+  };
+
+  closeIcon3.onclick = function revealLearned() {
+    languages3.style.display = 'flex';
+    learned3.style.display = 'none';
+  };
+} else {
+}
 
 //HEADER SCROLL ANIMATION
 window.addEventListener('scroll', () => {
@@ -243,18 +266,38 @@ gsap.from('.g-footer', {
   ease: 'power2.out',
 });
 
-//ABOUT
+//ABOUT LANDING
 
-// gsap.from('.g-about', {
-//   scrollTrigger: {
-//     trigger: '.g-about',
-//     start: 'top center+=200',
-//   },
-//   y: 50,
-//   opacity: 0,
-//   duration: 0.7,
-//   stagger: 0.4,
-// });
+gsap.from('.g-about-education', {
+  scrollTrigger: {
+    trigger: '.g-about-education',
+    start: 'top center+=200',
+  },
+  y: 50,
+  opacity: 0,
+  duration: 0.7,
+  stagger: 0.4,
+});
+gsap.from('.g-about-courses', {
+  scrollTrigger: {
+    trigger: '.g-about-courses',
+    start: 'top center+=200',
+  },
+  y: 50,
+  opacity: 0,
+  duration: 0.7,
+  stagger: 0.4,
+});
+gsap.from('.g-about-something', {
+  scrollTrigger: {
+    trigger: '.g-about-something',
+    start: 'top center+=200',
+  },
+  y: 50,
+  opacity: 0,
+  duration: 0.7,
+  stagger: 0.4,
+});
 
 //WORK
 // gsap.from('.gsap-my-work-img', {

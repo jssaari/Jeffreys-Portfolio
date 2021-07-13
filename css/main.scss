@@ -260,6 +260,12 @@ section.about {
         letter-spacing: 0.03em;
         font-size: 1.1em;
       }
+      #plain-joe {
+        text-decoration: underline;
+        &:hover {
+          color: #f37022;
+        }
+      }
     }
     .about-button {
       margin: 1.5em 0;
@@ -460,7 +466,6 @@ section.YouTube {
   @include desktop {
     flex-direction: row;
   }
-
   .left {
     text-align: center;
     margin: 5em auto 3em;
@@ -748,6 +753,164 @@ footer {
   }
 }
 
+//ABOUT LANDING PAGE START
+section.about-education {
+  background-color: color(off-white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+    height: 23em;
+  }
+  .left {
+    text-align: center;
+    margin: 2em auto 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22em;
+    @include desktop {
+      width: 35em;
+      margin: 2em 2em 2em 5em;
+    }
+    h3 {
+      color: color(primary);
+      margin: 0;
+      font-size: 2em;
+      @include desktop {
+        font-size: 2.5em;
+        width: 10em;
+      }
+    }
+    p {
+      color: color(secondary);
+      font-weight: 400;
+      font-size: 1.1em;
+      letter-spacing: 0em;
+    }
+  }
+  .right {
+    margin: 0em auto -2em;
+    position: relative;
+    width: 25em;
+    height: 11.7em;
+    @include desktop {
+      width: 42.5em;
+      margin: 0;
+    }
+  }
+}
+
+section.about-courses {
+  background-color: color(primary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+    height: 23em;
+  }
+  .left {
+    order: 2;
+    margin: 0em auto -2em;
+    position: relative;
+    width: 25em;
+    height: 11.7em;
+    @include desktop {
+      order: 1;
+      width: 42.5em;
+      margin: 0;
+    }
+  }
+  .right {
+    order: 1;
+    text-align: center;
+    margin: 5em auto 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22em;
+    @include desktop {
+      order: 2;
+      width: 35em;
+      margin: 7em 2em 2em 5em;
+    }
+    h3 {
+      color: color(secondary);
+      margin: 0;
+      font-size: 2em;
+      @include desktop {
+        font-size: 2.5em;
+        width: 10em;
+      }
+    }
+    p {
+      color: #fff;
+      font-weight: 400;
+      font-size: 1.1em;
+      letter-spacing: 0em;
+    }
+  }
+}
+
+section.about-something {
+  background-color: color(secondary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+    height: 23em;
+  }
+  .left {
+    order: 1;
+    text-align: center;
+    margin: 5em auto 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22em;
+    @include desktop {
+      order: 1;
+      width: 35em;
+      margin: 7em 2em 2em 5em;
+    }
+    h3 {
+      color: color(primary);
+      margin: 0;
+      font-size: 2em;
+      @include desktop {
+        font-size: 2.5em;
+        width: 10em;
+      }
+    }
+    p {
+      color: #fff;
+      font-weight: 400;
+      font-size: 1.1em;
+      letter-spacing: 0em;
+    }
+  }
+  .right {
+    order: 2;
+    margin: 0em auto -2em;
+    position: relative;
+    width: 25em;
+    height: 11.7em;
+    @include desktop {
+      order: 2;
+      width: 42.5em;
+      margin: 0;
+    }
+  }
+}
+
+//ABOUT LANDING PAGE END
+
 //MY WORK LANDING PAGE START
 
 section.my-work-landing {
@@ -990,13 +1153,9 @@ section.recent-work {
           opacity: 1;
           transition: opacity 0.4s;
         }
-        #close {
-          font-size: 2em;
-          color: color(primary);
-          width: 1em;
-          cursor: pointer;
-        }
-        #close-2 {
+        #close,
+        #close-2,
+        #close-3 {
           font-size: 2em;
           color: color(primary);
           width: 1em;
