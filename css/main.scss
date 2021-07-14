@@ -811,18 +811,85 @@ section.about-courses {
   flex-direction: column;
   @include desktop {
     flex-direction: row;
-    height: 23em;
+    height: 27em;
   }
   .left {
     order: 2;
-    margin: 0em auto -2em;
+    margin: 0em auto 2em;
     position: relative;
-    width: 25em;
+    width: 28em;
     height: 11.7em;
     @include desktop {
-      order: 1;
-      width: 42.5em;
+      order: 2;
+      width: 49em;
       margin: 0;
+    }
+    ul {
+      background-color: color(primary-accent);
+      border-radius: 0.9em;
+      padding: 2em;
+      li {
+        margin-top: 0.5em;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1em;
+        letter-spacing: 0em;
+        line-height: 1.5em;
+        @include desktop {
+          font-size: 1.1em;
+          line-height: 2.5em;
+        }
+        span {
+          &.complete {
+            display: inline-block;
+            height: 2em;
+            width: 2em;
+            background-color: #1fc75a;
+            border-radius: 50% 50% 50% 50%;
+            margin: 0 auto -0.5em;
+            position: relative;
+            i {
+              position: absolute;
+              transform: translate(-50%, -50%);
+              top: 50%;
+              left: 50%;
+              width: 1em;
+            }
+          }
+          &.incomplete {
+            display: inline-block;
+            height: 2em;
+            width: 2em;
+            background-color: rgb(228, 228, 86);
+            border-radius: 50% 50% 50% 50%;
+            margin: 0 auto -0.5em;
+            position: relative;
+            i {
+              position: absolute;
+              transform: translate(-50%, -50%);
+              top: 25%;
+              left: 25%;
+              width: 1em;
+              animation: spin 2s linear infinite;
+              @keyframes spin {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(360deg);
+                }
+              }
+            }
+          }
+        }
+        a {
+          color: #fff;
+          text-decoration: underline;
+          &:hover {
+            color: #f00;
+          }
+        }
+      }
     }
   }
   .right {
@@ -834,9 +901,9 @@ section.about-courses {
     align-items: center;
     width: 22em;
     @include desktop {
-      order: 2;
+      order: 1;
       width: 35em;
-      margin: 7em 2em 2em 5em;
+      margin: 0em 2em 2em 5em;
     }
     h3 {
       color: color(secondary);
@@ -852,6 +919,12 @@ section.about-courses {
       font-weight: 400;
       font-size: 1.1em;
       letter-spacing: 0em;
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: #f00;
+        }
+      }
     }
   }
 }
@@ -875,7 +948,7 @@ section.about-something {
     align-items: center;
     width: 22em;
     @include desktop {
-      order: 1;
+      order: 2;
       width: 35em;
       margin: 7em 2em 2em 5em;
     }
@@ -902,9 +975,30 @@ section.about-something {
     width: 25em;
     height: 11.7em;
     @include desktop {
-      order: 2;
+      order: 1;
       width: 42.5em;
       margin: 0;
+    }
+  }
+}
+
+.left-img-vertical {
+  margin: auto !important;
+}
+
+.right-img-vertical {
+  margin: auto auto 2em !important;
+  @include desktop {
+    margin: 0 auto 2em !important;
+    width: 50%;
+  }
+  img.vertical {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    max-width: 18em;
+    @include desktop {
     }
   }
 }

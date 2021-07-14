@@ -1223,7 +1223,7 @@ section.about-courses {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 23em;
+    height: 27em;
   }
 }
 
@@ -1231,20 +1231,113 @@ section.about-courses .left {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin: 0em auto -2em;
+  margin: 0em auto 2em;
   position: relative;
-  width: 25em;
+  width: 28em;
   height: 11.7em;
 }
 
 @media (min-width: 840px) {
   section.about-courses .left {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 42.5em;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 49em;
     margin: 0;
   }
+}
+
+section.about-courses .left ul {
+  background-color: #3675b4;
+  border-radius: 0.9em;
+  padding: 2em;
+}
+
+section.about-courses .left ul li {
+  margin-top: 0.5em;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1em;
+  letter-spacing: 0em;
+  line-height: 1.5em;
+}
+
+@media (min-width: 840px) {
+  section.about-courses .left ul li {
+    font-size: 1.1em;
+    line-height: 2.5em;
+  }
+}
+
+section.about-courses .left ul li span.complete {
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  background-color: #1fc75a;
+  border-radius: 50% 50% 50% 50%;
+  margin: 0 auto -0.5em;
+  position: relative;
+}
+
+section.about-courses .left ul li span.complete i {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 1em;
+}
+
+section.about-courses .left ul li span.incomplete {
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  background-color: #e4e456;
+  border-radius: 50% 50% 50% 50%;
+  margin: 0 auto -0.5em;
+  position: relative;
+}
+
+section.about-courses .left ul li span.incomplete i {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 25%;
+  left: 25%;
+  width: 1em;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+section.about-courses .left ul li a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+section.about-courses .left ul li a:hover {
+  color: #f00;
 }
 
 section.about-courses .right {
@@ -1268,11 +1361,11 @@ section.about-courses .right {
 
 @media (min-width: 840px) {
   section.about-courses .right {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 35em;
-    margin: 7em 2em 2em 5em;
+    margin: 0em 2em 2em 5em;
   }
 }
 
@@ -1294,6 +1387,14 @@ section.about-courses .right p {
   font-weight: 400;
   font-size: 1.1em;
   letter-spacing: 0em;
+}
+
+section.about-courses .right p a {
+  text-decoration: underline;
+}
+
+section.about-courses .right p a:hover {
+  color: #f00;
 }
 
 section.about-something {
@@ -1343,9 +1444,9 @@ section.about-something .left {
 
 @media (min-width: 840px) {
   section.about-something .left {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     width: 35em;
     margin: 7em 2em 2em 5em;
   }
@@ -1383,12 +1484,35 @@ section.about-something .right {
 
 @media (min-width: 840px) {
   section.about-something .right {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 42.5em;
     margin: 0;
   }
+}
+
+.left-img-vertical {
+  margin: auto !important;
+}
+
+.right-img-vertical {
+  margin: auto auto 2em !important;
+}
+
+@media (min-width: 840px) {
+  .right-img-vertical {
+    margin: 0 auto 2em !important;
+    width: 50%;
+  }
+}
+
+.right-img-vertical img.vertical {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  max-width: 18em;
 }
 
 section.my-work-landing {
