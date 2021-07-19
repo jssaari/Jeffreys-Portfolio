@@ -821,6 +821,7 @@ form#contact .inner .form {
 
 form#contact .inner .form .name {
   min-height: 5.3em;
+  width: 105.25%;
 }
 
 @media (min-width: 840px) {
@@ -832,6 +833,7 @@ form#contact .inner .form .name {
 
 form#contact .inner .form .email {
   min-height: 5.3em;
+  width: 105.25%;
 }
 
 @media (min-width: 840px) {
@@ -921,7 +923,7 @@ form#contact .inner .form ::placeholder {
 
 form#contact .inner .contact-button {
   margin: 1em 0 0;
-  padding: 0.36em 0.66667em;
+  padding: 0.3em 0.90909em;
   font-size: 1em;
   font-weight: 700;
   background-color: #142a40;
@@ -1158,10 +1160,12 @@ section.about-education .left {
       -ms-flex-align: center;
           align-items: center;
   width: 22em;
+  padding-bottom: 2em;
 }
 
 @media (min-width: 840px) {
   section.about-education .left {
+    padding-bottom: 0em;
     width: 35em;
     margin: 2em 2em 2em 5em;
   }
@@ -1181,10 +1185,16 @@ section.about-education .left h3 {
 }
 
 section.about-education .left p {
+  font-size: 0.9em;
   color: #142a40;
   font-weight: 400;
-  font-size: 1.1em;
   letter-spacing: 0em;
+}
+
+@media (min-width: 840px) {
+  section.about-education .left p {
+    font-size: 1.1em;
+  }
 }
 
 section.about-education .right {
@@ -1385,8 +1395,14 @@ section.about-courses .right h3 {
 section.about-courses .right p {
   color: #fff;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 0.9em;
   letter-spacing: 0em;
+}
+
+@media (min-width: 840px) {
+  section.about-courses .right p {
+    font-size: 1.1em;
+  }
 }
 
 section.about-courses .right p a {
@@ -1468,8 +1484,14 @@ section.about-something .left h3 {
 section.about-something .left p {
   color: #fff;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 0.9em;
   letter-spacing: 0em;
+}
+
+@media (min-width: 840px) {
+  section.about-something .left p {
+    font-size: 1.1em;
+  }
 }
 
 section.about-something .right {

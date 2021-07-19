@@ -563,6 +563,7 @@ form#contact {
       }
       .name {
         min-height: 5.3em;
+        width: 105.25%;
         @include desktop {
           width: 47%;
           padding: 0 0 1em;
@@ -570,6 +571,7 @@ form#contact {
       }
       .email {
         min-height: 5.3em;
+        width: 105.25%;
         @include desktop {
           width: 47%;
           padding: 0 0 1em;
@@ -623,7 +625,7 @@ form#contact {
     }
     .contact-button {
       margin: 1em 0 0;
-      padding: $ybutpad * 1.8 $xbutpad/1.5;
+      padding: $ybutpad * 1.5 $xbutpad/1.1;
       font-size: 1em;
       font-weight: 700;
       background-color: color(secondary);
@@ -771,7 +773,9 @@ section.about-education {
     flex-direction: column;
     align-items: center;
     width: 22em;
+    padding-bottom: 2em;
     @include desktop {
+      padding-bottom: 0em;
       width: 35em;
       margin: 2em 2em 2em 5em;
     }
@@ -785,10 +789,13 @@ section.about-education {
       }
     }
     p {
+      font-size: 0.9em;
       color: color(secondary);
       font-weight: 400;
-      font-size: 1.1em;
       letter-spacing: 0em;
+      @include desktop {
+        font-size: 1.1em;
+      }
     }
   }
   .right {
@@ -917,8 +924,11 @@ section.about-courses {
     p {
       color: #fff;
       font-weight: 400;
-      font-size: 1.1em;
+      font-size: 0.9em;
       letter-spacing: 0em;
+      @include desktop {
+        font-size: 1.1em;
+      }
       a {
         text-decoration: underline;
         &:hover {
@@ -964,8 +974,11 @@ section.about-something {
     p {
       color: #fff;
       font-weight: 400;
-      font-size: 1.1em;
+      font-size: 0.9em;
       letter-spacing: 0em;
+      @include desktop {
+        font-size: 1.1em;
+      }
     }
   }
   .right {
