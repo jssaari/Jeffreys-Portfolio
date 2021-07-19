@@ -1215,7 +1215,7 @@ section.recent-work {
           flex-wrap: wrap;
           justify-content: center;
           width: 24em;
-          margin: 0 auto 1.4em;
+          margin: 0 auto 0em;
           li {
             background-color: #3c88d4;
             padding: 0.3em 0.7em;
@@ -1228,7 +1228,7 @@ section.recent-work {
         }
         .buttons {
           max-width: 24em;
-          margin-bottom: 1em;
+          margin-bottom: 0em;
           .button {
             margin: 0 0.2em;
             font-size: 1.3em;
@@ -1267,6 +1267,8 @@ section.recent-work {
           color: color(primary);
           width: 1em;
           cursor: pointer;
+          align-self: flex-end;
+          margin: 0.3em 0 0;
         }
         ul {
           display: flex;
@@ -1274,7 +1276,7 @@ section.recent-work {
           flex-wrap: wrap;
           justify-content: center;
           width: 24em;
-          margin: 0 auto 1.4em;
+          margin: 0 auto 1em;
           max-height: 7.1em;
           li {
             // background-color: #3c88d4;
@@ -1288,7 +1290,7 @@ section.recent-work {
         }
         .buttons {
           max-width: 24em;
-          margin-bottom: 1em;
+          margin-bottom: 1.5em;
           .button {
             margin: 0 0.2em;
             font-size: 1.3em;

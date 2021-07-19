@@ -1855,7 +1855,7 @@ section.recent-work .cards .card .card-inner ul {
       -ms-flex-pack: center;
           justify-content: center;
   width: 24em;
-  margin: 0 auto 1.4em;
+  margin: 0 auto 0em;
 }
 
 section.recent-work .cards .card .card-inner ul li {
@@ -1870,7 +1870,7 @@ section.recent-work .cards .card .card-inner ul li {
 
 section.recent-work .cards .card .card-inner .buttons {
   max-width: 24em;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
 }
 
 section.recent-work .cards .card .card-inner .buttons .button {
@@ -1920,6 +1920,9 @@ section.recent-work .cards .card .card-inner-learned #close-3 {
   color: #3c88d4;
   width: 1em;
   cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0.3em 0 0;
 }
 
 section.recent-work .cards .card .card-inner-learned ul {
@@ -1936,7 +1939,7 @@ section.recent-work .cards .card .card-inner-learned ul {
       -ms-flex-pack: center;
           justify-content: center;
   width: 24em;
-  margin: 0 auto 1.4em;
+  margin: 0 auto 1em;
   max-height: 7.1em;
 }
 
@@ -1948,7 +1951,7 @@ section.recent-work .cards .card .card-inner-learned ul li {
 
 section.recent-work .cards .card .card-inner-learned .buttons {
   max-width: 24em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 section.recent-work .cards .card .card-inner-learned .buttons .button {
