@@ -11,6 +11,8 @@ const workElMob = document.getElementById('work-nav-mobile');
 const hamburger = document.getElementById('hamburger-icon');
 const hamburgerMenu = document.getElementById('hamburger');
 
+const mobileMenuButton = document.getElementById('mobile-nav-button');
+
 const learned = document.getElementById('learned');
 const learnedButton = document.getElementById('learned-button');
 const languages = document.getElementById('languages');
@@ -126,6 +128,13 @@ window.addEventListener('scroll', () => {
   }
   lastScroll = currentScroll;
 });
+
+//HIDE MOBILE MENU ON CONTACT BUTTON CLICK
+mobileMenuButton.onclick = function hideMobileMenu() {
+  if (hamburgerMenu.classList.contains('reveal-ham')) {
+    hamburgerMenu.classList.remove('reveal-ham');
+  }
+};
 
 //GSAP ANIMATIONS
 
