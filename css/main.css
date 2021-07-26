@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
-.scroll-down header {
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
+::-moz-selection {
+  background: #2c70b4;
+}
+::selection {
+  background: #2c70b4;
 }
 
-.scroll-up header {
-  -webkit-transform: none;
-          transform: none;
+::-moz-selection {
+  background: #2c70b4;
 }
 
 body,
@@ -25,16 +26,14 @@ body {
   overflow-y: scroll;
 }
 
-::-moz-selection {
-  background: #2c70b4;
+.scroll-down header {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
 }
 
-::selection {
-  background: #2c70b4;
-}
-
-::-moz-selection {
-  background: #2c70b4;
+.scroll-up header {
+  -webkit-transform: none;
+          transform: none;
 }
 
 header {
@@ -185,18 +184,6 @@ header .mobile-menu i:hover {
 #hamburger .mobile-nav-button {
   margin-top: 1em;
   font-size: 1.5em;
-}
-
-.reveal-ham {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-@media (min-width: 840px) {
-  .reveal-ham {
-    display: none !important;
-  }
 }
 
 section.hero {
@@ -1105,12 +1092,6 @@ footer .credits {
   font-size: 1em;
 }
 
-@media (min-width: 840px) {
-  footer .credits {
-    font-size: 1em;
-  }
-}
-
 footer .credits a {
   -webkit-transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -1347,7 +1328,7 @@ section.about-courses .left ul li a {
 }
 
 section.about-courses .left ul li a:hover {
-  color: #f00;
+  color: #b55bf1;
 }
 
 section.about-courses .right {
@@ -2079,5 +2060,17 @@ button {
   cursor: pointer;
   margin: 0;
   padding: 0;
+}
+
+.reveal-ham {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+@media (min-width: 840px) {
+  .reveal-ham {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

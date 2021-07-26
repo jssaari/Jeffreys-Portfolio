@@ -1,5 +1,7 @@
 'use strict';
-
+//VARIABLES
+//-----------------------------------------------------------------------------
+//ADDING STYLE TO NAV
 const curLocation = window.location.pathname;
 const about = '/about-me.html';
 const aboutEl = document.getElementById('about-nav');
@@ -8,11 +10,14 @@ const work = '/my-work.html';
 const workEl = document.getElementById('work-nav');
 const workElMob = document.getElementById('work-nav-mobile');
 
+//HAMBURGER
 const hamburger = document.getElementById('hamburger-icon');
 const hamburgerMenu = document.getElementById('hamburger');
 
+//MOBILE MENU MODAL
 const mobileMenuButton = document.getElementById('mobile-nav-button');
 
+//RECENT WORK TILES
 const learned = document.getElementById('learned');
 const learnedButton = document.getElementById('learned-button');
 const languages = document.getElementById('languages');
@@ -29,10 +34,14 @@ const languages3 = document.getElementById('languages-3');
 const languagesButton3 = document.getElementById('languages-button-3');
 const closeIcon3 = document.getElementById('close-3');
 
+//HEADER SCROLL
 const body = document.body;
 const scrollUp = 'scroll-up';
 const scrollDown = 'scroll-down';
 let lastScroll = 0;
+
+//FUNCTIONS
+//-----------------------------------------------------------------------------
 //ADD STYLE TO NAV ITEM IF NAV ITEM IS CURRENT PAGE
 about === curLocation
   ? (aboutEl.style.opacity = 1) &&
@@ -50,14 +59,15 @@ hamburger.onclick = function revealHamburger() {
   !hamburgerMenu.classList.contains('reveal-ham')
     ? hamburgerMenu.classList.add('reveal-ham')
     : hamburgerMenu.classList.remove('reveal-ham');
-  // if ((hamburgerMenu.style.cssText = 'display:none;')) {
-  //   hamburgerMenu.style.cssText = 'display:block;';
-  // } else if ((hamburgerMenu.style.cssText = 'display:block;')) {
-  //   hamburgerMenu.style.cssText = 'display:none;';
-  // }
+};
+//HIDE MOBILE MENU ON CONTACT BUTTON CLICK
+mobileMenuButton.onclick = function hideMobileMenu() {
+  if (hamburgerMenu.classList.contains('reveal-ham')) {
+    hamburgerMenu.classList.remove('reveal-ham');
+  }
 };
 
-//REVEAL WHAT I LEARNED ON CLICK
+//TOGGLE WHAT I LEARNED ON CLICK
 if (work === curLocation) {
   learnedButton.onclick = function revealLearned() {
     learned.style.display = 'flex';
@@ -129,15 +139,7 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 
-//HIDE MOBILE MENU ON CONTACT BUTTON CLICK
-mobileMenuButton.onclick = function hideMobileMenu() {
-  if (hamburgerMenu.classList.contains('reveal-ham')) {
-    hamburgerMenu.classList.remove('reveal-ham');
-  }
-};
-
 //GSAP ANIMATIONS
-
 gsap.registerPlugin(ScrollTrigger);
 var tl = gsap.timeline();
 gsap.from('.g-hero', {
@@ -295,7 +297,7 @@ gsap.from('.g-about-courses', {
   y: 50,
   opacity: 0,
   duration: 0.7,
-  stagger: 0.4,
+  stagger: 0.2,
 });
 gsap.from('.g-about-something', {
   scrollTrigger: {
@@ -307,99 +309,3 @@ gsap.from('.g-about-something', {
   duration: 0.7,
   stagger: 0.4,
 });
-
-//WORK
-// gsap.from('.gsap-my-work-img', {
-//   scrollTrigger: {
-//     trigger: '.gsap-my-work-img',
-//     start: 'top center+=100',
-//   },
-//   opacity: 0,
-//   duration: 2,
-//   x: -100,
-//   ease: 'power2.out',
-// });
-// gsap.from('.g-my-work-right', {
-//   scrollTrigger: {
-//     trigger: '.g-my-work-right',
-//     start: 'top center+=100',
-//   },
-//   opacity: 0,
-//   duration: 2,
-//   x: 100,
-//   ease: 'power2.out',
-// });
-// gsap.from('.g-buttons', {
-//   scrollTrigger: {
-//     trigger: '.g-buttons',
-//     start: 'top center+=200',
-//   },
-//   opacity: 0,
-//   duration: 1,
-//   y: -50,
-//   ease: 'power2.out',
-// });
-// gsap.from('.g-my-work', {
-//   scrollTrigger: {
-//     trigger: '.g-my-work',
-//     start: 'top center+=100',
-//   },
-//   stagger: 0.3,
-//   opacity: 0,
-//   duration: 1,
-//   y: -50,
-//   ease: 'power2.out',
-// });
-// gsap.from('.g-tools', {
-//   scrollTrigger: {
-//     trigger: '.g-tools',
-//     start: 'top center+=250',
-//   },
-//   opacity: 0,
-//   duration: 1,
-//   y: 50,
-//   ease: 'power2.out',
-// });
-// gsap.from('.g-card', {
-//   scrollTrigger: {
-//     trigger: '.g-card',
-//     start: 'top center+=100',
-//   },
-//   stagger: 0.3,
-//   opacity: 0,
-//   duration: 1,
-//   y: 50,
-//   ease: 'power2.out',
-// });
-// gsap.from('.g-form', {
-//   scrollTrigger: {
-//     trigger: '.g-form',
-//     start: 'top center+=250',
-//   },
-//   stagger: 0.2,
-//   opacity: 0,
-//   duration: 0.5,
-//   y: 50,
-//   ease: 'power2.out',
-// });
-// gsap.from('.suggestions', {
-//   scrollTrigger: {
-//     trigger: '.suggestions',
-//     start: 'top center+=300',
-//   },
-//   opacity: 0,
-//   duration: 1,
-//   y: 50,
-//   ease: 'power2.out',
-// });
-// gsap.from('.g-footer', {
-//   scrollTrigger: {
-//     trigger: '.suggestions',
-//     start: 'top bottom',
-//   },
-//   stagger: 0.3,
-//   opacity: 0,
-//   duration: 1,
-//   y: -50,
-//   ease: 'power2.out',
-// });

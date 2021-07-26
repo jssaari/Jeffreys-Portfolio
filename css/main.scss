@@ -3,11 +3,9 @@
 $colors: (
   primary: #3c88d4,
   primary-hover: #2c70b4,
-  // primary-hover: #387fc5,
   primary-accent: #3675b4,
   secondary: #142a40,
   secondary-hover: #071625,
-  // secondary-hover: #0d1b29,
   tertiary: #cbdbfc,
   off-white: #f2f2f2,
 );
@@ -16,13 +14,12 @@ $padding: 1em;
 $ybutpad: 0.2em;
 $xbutpad: 1em;
 $radius: 1.1em;
+$desktop: 840px;
+$youtube: 1240px;
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
-
-$desktop: 840px;
-$youtube: 1240px;
 
 @mixin youtube {
   @media (max-width: #{$youtube}) {
@@ -35,12 +32,11 @@ $youtube: 1240px;
   }
 }
 
-.scroll-down header {
-  transform: translate3d(0, -100%, 0);
+::selection {
+  background: color(primary-hover);
 }
-
-.scroll-up header {
-  transform: none;
+::-moz-selection {
+  background: color(primary-hover);
 }
 
 body,
@@ -57,11 +53,12 @@ body {
   overflow-y: scroll;
 }
 
-::selection {
-  background: color(primary-hover);
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
 }
-::-moz-selection {
-  background: color(primary-hover);
+
+.scroll-up header {
+  transform: none;
 }
 
 header {
@@ -144,7 +141,6 @@ header {
   backdrop-filter: blur(4px);
   text-align: center;
   transition: 0.4s;
-  // display: flex;
   padding: 5em 0;
   flex-direction: column;
   align-items: center;
@@ -166,12 +162,6 @@ header {
   .mobile-nav-button {
     margin-top: 1em;
     font-size: 1.5em;
-  }
-}
-.reveal-ham {
-  display: flex !important;
-  @include desktop {
-    display: none !important;
   }
 }
 
@@ -212,8 +202,6 @@ section.hero {
   .hero-button {
     padding: 0.4em 1.2em;
     margin: 1em 0 0;
-    @include desktop {
-    }
   }
 }
 .ellipse {
@@ -578,7 +566,6 @@ form#contact {
         }
       }
       .message {
-        // min-height: 6em;
         min-height: 16em;
         @include desktop {
           width: 100%;
@@ -686,8 +673,6 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  @include desktop {
-  }
   .inner {
     margin: 5em auto 1em;
     @include desktop {
@@ -743,9 +728,6 @@ footer {
   .credits {
     color: color(tertiary);
     font-size: 1em;
-    @include desktop {
-      font-size: 1em;
-    }
     a {
       transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
       &:hover {
@@ -893,7 +875,7 @@ section.about-courses {
           color: #fff;
           text-decoration: underline;
           &:hover {
-            color: #f00;
+            color: #b55bf1;
           }
         }
       }
@@ -1011,8 +993,6 @@ section.about-something {
     height: auto;
     margin: auto;
     max-width: 18em;
-    @include desktop {
-    }
   }
 }
 
@@ -1025,8 +1005,6 @@ section.my-work-landing {
   text-align: center;
   margin: 0;
   padding: 8em 0 0;
-  @include desktop {
-  }
   h1 {
     color: white;
     margin: 0;
@@ -1245,9 +1223,7 @@ section.recent-work {
       .card-inner-learned {
         position: relative;
         display: none;
-        // inset: 0;
         opacity: 0;
-        // display: flex;
         flex-direction: column;
         justify-content: space-around;
         min-height: inherit;
@@ -1279,11 +1255,7 @@ section.recent-work {
           margin: 0 auto 1em;
           max-height: 7.1em;
           li {
-            // background-color: #3c88d4;
-            // padding: 0.3em 0.7em;
-            // border-radius: 0.2em;
             color: white;
-            // margin: 0.4em 0.4em;
             font-size: 1em;
             letter-spacing: 0.03em;
           }
@@ -1399,4 +1371,11 @@ button {
   cursor: pointer;
   margin: 0;
   padding: 0;
+}
+
+.reveal-ham {
+  display: flex !important;
+  @include desktop {
+    display: none !important;
+  }
 }
