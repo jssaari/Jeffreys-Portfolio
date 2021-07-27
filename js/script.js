@@ -236,7 +236,7 @@ gsap.from('.g-tools', {
 gsap.from('.suggestions', {
   scrollTrigger: {
     trigger: '.suggestions',
-    start: 'top center+=250',
+    start: 'top center+=450',
   },
   opacity: 0,
   duration: 1,
