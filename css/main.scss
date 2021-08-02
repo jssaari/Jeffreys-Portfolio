@@ -191,7 +191,7 @@ section.hero {
   }
   h1 {
     color: color(primary);
-    font-size: 1.8em;
+    font-size: 1.63em;
     line-height: 1.3em;
     margin: 0;
     text-transform: uppercase;
@@ -206,7 +206,7 @@ section.hero {
     font-size: 0.9em;
     letter-spacing: 0.05em;
     line-height: 1.5em;
-    margin: 0.3em 0;
+    margin: 0.5em 1.3em 0.3em;
     @include desktop {
       font-size: 1.2em;
     }
@@ -245,6 +245,7 @@ section.about {
     margin: auto;
     max-width: 33em;
     width: 80%;
+    padding-top: 2em;
     @include desktop {
       max-width: 60.5em;
       padding: 5.5em 0;
@@ -296,11 +297,14 @@ section.about {
       border-radius: 0.7em;
       background-color: color(secondary);
       padding: 1em;
-      width: 22em;
+      width: 18em;
       height: 27.5em;
       margin: 2em 0em 0em;
       &:last-child {
         margin-bottom: -25em;
+      }
+      @include desktop {
+        width: 22em;
       }
       @include desktop {
         width: 22em;
@@ -312,18 +316,30 @@ section.about {
       }
       i {
         color: color(primary);
-        margin: 0.5em 0em;
-        font-size: 2.5em;
+        font-size: 3em;
+        margin: 0.2em 0em;
+        @include desktop {
+          font-size: 2.5em;
+          margin: 0.5em 0em;
+        }
       }
 
       h3 {
         color: #fff;
+        font-size: 1.4em;
         margin: 0em 0 0;
+        @include desktop {
+          font-size: 1.2em;
+        }
       }
       h4 {
         margin: 1em 0 0.2em;
         color: color(primary);
+        font-size: 1.1em;
         font-weight: 600;
+        @include desktop {
+          font-size: 1em;
+        }
       }
       p {
         color: #fff;
@@ -345,6 +361,7 @@ section.my-work {
   h1 {
     color: color(primary);
     margin: 0;
+    font-size: 2em;
     @include desktop {
       font-size: 4em;
     }
@@ -355,6 +372,7 @@ section.my-work {
     font-weight: 400;
     letter-spacing: 0.2em;
     margin: 0;
+    font-size: 1.3em;
     @include desktop {
       font-size: 1.7em;
       margin: -0.5em 0 1.5em;
@@ -697,6 +715,7 @@ footer {
   }
   p {
     color: #fff;
+    font-size: 1.1em;
     @include desktop {
       font-size: 1.3em;
       &.tagline {
@@ -1057,7 +1076,7 @@ section.my-work-landing {
         align-items: center;
       }
       img {
-        width: 400px;
+        width: 380px;
         margin-top: 1em;
         @include desktop {
           margin-top: 0em;
@@ -1172,9 +1191,13 @@ section.recent-work {
     justify-content: center;
     flex-wrap: wrap;
     .card {
+      min-height: 14em;
+      min-width: 21em;
       margin: 0em 1.2em 2.4em;
-      min-height: 16em;
-      min-width: 24em;
+      @include desktop {
+        min-height: 16em;
+        min-width: 24em;
+      }
       .image {
         background-image: url(https://campusrevive.org/wp-content/uploads/2021/02/CYPRES-PHOTO.jpg?id=2261);
         display: block;
