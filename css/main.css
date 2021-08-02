@@ -2013,12 +2013,13 @@ section.recent-work .cards .card .card-inner-learned ul {
       -ms-flex-pack: center;
           justify-content: center;
   width: 21em;
-  margin: 0 auto 0.5em;
+  margin: -0.5em auto 0em;
   max-height: 7.1em;
 }
 
 @media (min-width: 840px) {
   section.recent-work .cards .card .card-inner-learned ul {
+    margin: 0 auto 0.5em;
     width: 24em;
   }
 }
@@ -2042,7 +2043,7 @@ section.recent-work .cards .card .card-inner-learned .buttons {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 24em;
-  margin-bottom: 0.7em;
+  padding-bottom: 0.5em;
 }
 
 section.recent-work .cards .card .card-inner-learned .buttons .button {

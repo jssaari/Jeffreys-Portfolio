@@ -1307,9 +1307,10 @@ section.recent-work {
           flex-wrap: wrap;
           justify-content: center;
           width: 21em;
-          margin: 0 auto 0.5em;
+          margin: -0.5em auto 0em;
           max-height: 7.1em;
           @include desktop {
+            margin: 0 auto 0.5em;
             width: 24em;
           }
           li {
@@ -1324,7 +1325,7 @@ section.recent-work {
           justify-content: space-around;
           flex-wrap: wrap;
           max-width: 24em;
-          margin-bottom: 0.7em;
+          padding-bottom: 0.5em;
           .button {
             margin: 0 0.2em;
             font-size: 1.3em;
