@@ -1220,8 +1220,11 @@ section.recent-work {
         backface-visibility: hidden;
         background-color: #142a40;
         border-radius: 0.8em;
-        padding: 0 1em;
+        padding: 0 0em;
         transition: opacity 0.4s;
+        @include desktop {
+          padding: 0 1em;
+        }
         &:hover {
           opacity: 1;
           transition: opacity 0.4s;
@@ -1231,8 +1234,11 @@ section.recent-work {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: center;
-          width: 24em;
           margin: 0 auto 0em;
+          width: 21em;
+          @include desktop {
+            width: 24em;
+          }
           li {
             background-color: #3c88d4;
             padding: 0.3em 0.7em;
@@ -1244,12 +1250,19 @@ section.recent-work {
           }
         }
         .buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: wrap;
           max-width: 24em;
           margin-bottom: 0em;
           .button {
             margin: 0 0.2em;
             font-size: 1.3em;
             &.filled {
+              @media (max-width: 466px) {
+                margin-top: 0.5em;
+              }
               padding: 0.3em $xbutpad;
             }
             &.empty {
