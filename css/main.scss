@@ -16,6 +16,7 @@ $xbutpad: 1em;
 $radius: 1.1em;
 $desktop: 840px;
 $youtube: 1240px;
+$youtube-mobile: 840px;
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
@@ -23,6 +24,11 @@ $youtube: 1240px;
 
 @mixin youtube {
   @media (max-width: #{$youtube}) {
+    @content;
+  }
+}
+@mixin youtube-mobile {
+  @media (max-width: #{$youtube-mobile}) {
     @content;
   }
 }
@@ -70,7 +76,7 @@ header {
   z-index: 2;
   padding: 0.5em 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   transition: transform 0.4s;
   @include desktop {
@@ -80,7 +86,11 @@ header {
     margin: auto;
   }
   .logo {
+    margin-left: 2em;
     font-weight: 700;
+    @include desktop {
+      margin: 0;
+    }
   }
   .nav {
     display: none;
@@ -119,11 +129,13 @@ header {
     }
   }
   .mobile-menu {
+    margin-right: 2em;
     @include desktop {
+      margin: 0;
       display: none;
     }
     i {
-      font-size: 3.5em;
+      font-size: 2em;
       color: color(primary);
       &:hover {
         cursor: pointer;
@@ -503,6 +515,10 @@ section.YouTube {
     @include youtube {
       height: 17.6em;
       width: 30em;
+    }
+    @include youtube-mobile {
+      height: 14em;
+      width: 23em;
     }
     iframe {
       position: absolute;

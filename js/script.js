@@ -179,7 +179,7 @@ gsap.from('.gsap-my-work-img', {
   },
   opacity: 0,
   duration: 2,
-  x: -100,
+  y: -100,
   ease: 'power2.out',
 });
 gsap.from('.g-my-work-right', {
@@ -189,7 +189,7 @@ gsap.from('.g-my-work-right', {
   },
   opacity: 0,
   duration: 2,
-  x: 100,
+  y: 100,
   ease: 'power2.out',
 });
 gsap.from('iframe', {
@@ -199,7 +199,7 @@ gsap.from('iframe', {
   },
   opacity: 0,
   duration: 2,
-  x: 100,
+  y: 100,
   ease: 'power2.out',
 });
 gsap.from('.g-buttons', {
@@ -251,7 +251,7 @@ gsap.from('.g-YouTube', {
   stagger: 0.3,
   opacity: 0,
   duration: 2,
-  x: -100,
+  y: -100,
   ease: 'power2.out',
 });
 gsap.from('.g-form', {
