@@ -409,6 +409,7 @@ section.my-work {
         justify-content: space-evenly;
         @include desktop {
           justify-content: center;
+          margin: 2em 0 0;
           .button {
             margin: 0 0.5em;
           }
@@ -450,6 +451,7 @@ section.project-tools {
   max-width: 30em;
   width: 80%;
   @include desktop {
+    margin: 4em auto -2.5em;
     max-width: 48em;
   }
   ul {
