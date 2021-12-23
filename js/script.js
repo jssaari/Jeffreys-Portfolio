@@ -225,7 +225,7 @@ gsap.from('.g-my-work', {
 });
 gsap.from('.g-tools', {
   scrollTrigger: {
-    trigger: '.g-tools',
+    trigger: '.g-buttons',
     start: 'top center+=250',
   },
   opacity: 0,
