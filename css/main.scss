@@ -87,8 +87,10 @@ header {
   }
   .logo {
     margin-left: 2em;
+    font-size: 1.05em;
     font-weight: 700;
     @include desktop {
+      font-size: 1em;
       margin: 0;
     }
   }
@@ -424,7 +426,7 @@ section.my-work {
       align-items: center;
       flex-direction: column;
       margin: 0 auto -5em;
-      width: 60%;
+      width: 80%;
       @include desktop {
         width: 35%;
         margin: 0 auto;
@@ -432,9 +434,11 @@ section.my-work {
       ul {
         font-weight: 500;
         margin: 3em 0 1em;
+        font-size: 0.9em;
         line-height: 1.5em;
         @include desktop {
           line-height: 2em;
+          font-size: 1em;
           margin: 0 0 10em;
         }
       }
@@ -669,7 +673,7 @@ form#contact {
     max-width: 30em;
     margin: 1em auto -3.5em;
     padding: 0.5em 0.2em;
-    width: 90%;
+    width: 80%;
     @include desktop {
       max-width: 52em;
     }
@@ -680,14 +684,14 @@ form#contact {
       justify-content: space-evenly;
       align-items: center;
       text-align: center;
-      padding: 1.2em 1.2em;
+      padding: 0.5em 0.8em;
       @include desktop {
         flex-direction: row;
         padding: 2em 2em;
       }
       .left {
         font-weight: 500;
-        font-size: 1.4em;
+        font-size: 1.1em;
         padding-bottom: 0.2em;
         @include desktop {
           padding-bottom: 0em;
@@ -695,7 +699,7 @@ form#contact {
         }
       }
       .right {
-        font-size: 0.9em;
+        font-size: 0.7em;
         @include desktop {
           font-size: 1em;
         }
@@ -717,7 +721,7 @@ footer {
   }
   p {
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1em;
     @include desktop {
       font-size: 1.3em;
       &.tagline {
@@ -764,12 +768,15 @@ footer {
   }
   .credits {
     color: color(tertiary);
-    font-size: 1em;
+    font-size: 0.8em;
     a {
       transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
       &:hover {
         color: white;
       }
+    }
+    @include desktop {
+      font-size: 1em;
     }
   }
 }
@@ -1106,7 +1113,7 @@ section.my-work-landing {
       align-items: center;
       flex-direction: column;
       margin: 0 auto -5em;
-      width: 60%;
+      width: 80%;
       @include desktop {
         width: 35%;
         margin: 0 auto;
@@ -1114,10 +1121,12 @@ section.my-work-landing {
       ul {
         color: white;
         font-weight: 400;
+        font-size: 0.9em;
         line-height: 1.5em;
         margin: 3em 0 1em;
         @include desktop {
           line-height: 1.7em;
+          font-size: 1em;
           font-weight: 500;
           margin: 0 0 10em;
         }

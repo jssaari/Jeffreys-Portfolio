@@ -72,11 +72,13 @@ header {
 
 header .logo {
   margin-left: 2em;
+  font-size: 1.05em;
   font-weight: 700;
 }
 
 @media (min-width: 840px) {
   header .logo {
+    font-size: 1em;
     margin: 0;
   }
 }
@@ -597,7 +599,7 @@ section.my-work .inner .right {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto -5em;
-  width: 60%;
+  width: 80%;
 }
 
 @media (min-width: 840px) {
@@ -610,12 +612,14 @@ section.my-work .inner .right {
 section.my-work .inner .right ul {
   font-weight: 500;
   margin: 3em 0 1em;
+  font-size: 0.9em;
   line-height: 1.5em;
 }
 
 @media (min-width: 840px) {
   section.my-work .inner .right ul {
     line-height: 2em;
+    font-size: 1em;
     margin: 0 0 10em;
   }
 }
@@ -987,7 +991,7 @@ form#contact .suggestions {
   max-width: 30em;
   margin: 1em auto -3.5em;
   padding: 0.5em 0.2em;
-  width: 90%;
+  width: 80%;
 }
 
 @media (min-width: 840px) {
@@ -1012,7 +1016,7 @@ form#contact .suggestions .inner2 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 1.2em 1.2em;
+  padding: 0.5em 0.8em;
 }
 
 @media (min-width: 840px) {
@@ -1027,7 +1031,7 @@ form#contact .suggestions .inner2 {
 
 form#contact .suggestions .inner2 .left {
   font-weight: 500;
-  font-size: 1.4em;
+  font-size: 1.1em;
   padding-bottom: 0.2em;
 }
 
@@ -1039,7 +1043,7 @@ form#contact .suggestions .inner2 .left {
 }
 
 form#contact .suggestions .inner2 .right {
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 @media (min-width: 840px) {
@@ -1075,7 +1079,7 @@ footer .inner {
 
 footer p {
   color: #fff;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 @media (min-width: 840px) {
@@ -1142,7 +1146,7 @@ footer .social ul li i:hover {
 
 footer .credits {
   color: #cbdbfc;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 footer .credits a {
@@ -1152,6 +1156,12 @@ footer .credits a {
 
 footer .credits a:hover {
   color: white;
+}
+
+@media (min-width: 840px) {
+  footer .credits {
+    font-size: 1em;
+  }
 }
 
 section.about-education {
@@ -1702,7 +1712,7 @@ section.my-work-landing .inner .right {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto -5em;
-  width: 60%;
+  width: 80%;
 }
 
 @media (min-width: 840px) {
@@ -1715,6 +1725,7 @@ section.my-work-landing .inner .right {
 section.my-work-landing .inner .right ul {
   color: white;
   font-weight: 400;
+  font-size: 0.9em;
   line-height: 1.5em;
   margin: 3em 0 1em;
 }
@@ -1722,6 +1733,7 @@ section.my-work-landing .inner .right ul {
 @media (min-width: 840px) {
   section.my-work-landing .inner .right ul {
     line-height: 1.7em;
+    font-size: 1em;
     font-weight: 500;
     margin: 0 0 10em;
   }
